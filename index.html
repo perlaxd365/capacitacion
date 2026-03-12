@@ -1,33 +1,217 @@
-<h3>Bienvenidos a Capacitaciones Bahia 2026 - 01</h3>
-!
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Bahía</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0a6ebd;
+            color: white;
+            padding: 20px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1580281657527-47cda1e2e0b9') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* SECCIONES */
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0a6ebd;
+        }
+
+        /* SERVICIOS */
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #1b1b1b;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <img src="https://scontent.fchm1-1.fna.fbcdn.net/v/t39.30808-6/604689091_1565455782252003_2679689586898675598_n.png?_nc_cat=100&ccb=1-7&_nc_sid=2a1932&_nc_ohc=F8ustZdZEhgQ7kNvwGeDi1-&_nc_oc=AdnVl7AgCwue792TJ3IQ3msibIo0k4ePr6623iwmVQcL-7ilufBJn_hkm2YHpYT1ziMCKdbQGR8Cy-4Arc7eA7_u&_nc_zt=23&_nc_ht=scontent.fchm1-1.fna&_nc_gid=rUSKyGH1w86rQhdrXXfNIw&_nc_ss=8&oh=00_AfwWGpD-hiRjTOPJbqZdq_VJcOgshsT3se9piKv_rTYRXQ&oe=69B8B8A7"
-        alt="">
 
-    <script src="" async defer></script>
+    <!-- HEADER -->
+
+    <header>
+        <div class="container">
+            <h2>Clínica Bahía</h2>
+
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Bienvenidos a Clínica Bahía</h1>
+        <p>Tu salud es nuestra prioridad. Atención médica profesional y tecnología de última generación.</p>
+
+    </section>
+
+    <!-- NOSOTROS -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2>Sobre Nosotros</h2>
+
+            <p>
+                Clínica Bahía es un centro médico comprometido con brindar atención de calidad,
+                contando con un equipo de profesionales altamente capacitados y tecnología moderna.
+                Nuestro objetivo es ofrecer diagnósticos precisos, tratamientos eficaces y una
+                experiencia médica segura y confiable para todos nuestros pacientes.
+            </p>
+
+            <p>
+                Desde nuestra fundación, hemos trabajado para convertirnos en una clínica de
+                referencia en la región, ofreciendo múltiples especialidades médicas y un servicio
+                humano centrado en el bienestar integral de nuestros pacientes.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICIOS -->
+
+    <section class="section" style="background:#eef2f7;">
+
+        <div class="container">
+
+            <h2>Nuestros Servicios</h2>
+
+            <div class="servicios">
+
+                <div class="card">
+                    <h3>Consulta Médica</h3>
+                    <p>Atención médica general y especializada con profesionales altamente capacitados.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Laboratorio Clínico</h3>
+                    <p>Realizamos análisis clínicos con equipos modernos para resultados rápidos y confiables.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Diagnóstico por Imágenes</h3>
+                    <p>Ecografías, rayos X y estudios especializados para un diagnóstico preciso.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Emergencias</h3>
+                    <p>Atención de emergencias médicas con personal preparado y atención inmediata.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2>Contacto</h2>
+
+            <p><strong>Dirección:</strong> Av. Principal 123 - Chimbote</p>
+            <p><strong>Teléfono:</strong> (043) 123456</p>
+            <p><strong>Email:</strong> contacto@clinicabahia.com</p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Clínica Bahía</p>
+        <p>Todos los derechos reservados</p>
+
+    </footer>
+
 </body>
-
-<footer>
-
-</footer>
 
 </html>
