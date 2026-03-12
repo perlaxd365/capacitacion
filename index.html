@@ -96,6 +96,37 @@
         footer p {
             margin: 5px;
         }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contacto-col p {
+            margin: 10px 0;
+        }
+
+        /* Responsive para celular */
+
+        @media (max-width:768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fila-contacto {
+            display: flex;
+            gap: 40px;
+        }
+
+        .columna {
+            flex: 1;
+        }
+
+        .columna p {
+            margin: 10px 0;
+        }
     </style>
 </head>
 
@@ -189,24 +220,23 @@
     </section>
 
     <!-- CONTACTO -->
-
     <section class="section">
 
         <div class="container">
 
             <h2>Contacto</h2>
 
-            <div class="contacto-grid">
+            <div class="fila-contacto">
 
-                <div class="contacto-col">
+                <div class="columna">
                     <p><strong>Dirección:</strong> Av. Principal 123 - Chimbote</p>
                     <p><strong>Teléfono:</strong> (043) 123456</p>
                     <p><strong>Email:</strong> contacto@clinicabahia.com</p>
                 </div>
 
-                <div class="contacto-col">
-                    <p><strong>Horario de Atención:</strong> Lunes a Viernes 8:00 AM - 7:00 PM</p>
-                    <p><strong>Emergencias:</strong> Atención las 24 horas</p>
+                <div class="columna">
+                    <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 7:00 PM</p>
+                    <p><strong>Emergencias:</strong> Atención 24 horas</p>
                     <p><strong>WhatsApp:</strong> +51 999 888 777</p>
                 </div>
 
