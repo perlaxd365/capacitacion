@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin'])) {
     exit;
 }
 
-$conn = new mysqli("localhost", "cesarxd365", "TU_PASSWORD", "clinicabahia");
+$conn = new mysqli("localhost", "cesarxd365", "R+%I8yaE8^jA", "clinicabahia");
 
 $result = $conn->query("SELECT * FROM matriculas ORDER BY fecha DESC");
 
