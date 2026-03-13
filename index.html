@@ -344,25 +344,49 @@
 
                 <div class="modal-body">
 
-                    <form action="guardar.php" method="POST">
+                    <form>
 
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                        <input type="text" name="apellido" placeholder="Apellido" required>
-                        <input type="text" name="dni" placeholder="DNI" required>
-                        <input type="text" name="telefono" placeholder="Teléfono" required>
-                        <input type="email" name="correo" placeholder="Correo" required>
+                        <div class="mb-3">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control">
+                        </div>
 
-                        <select name="curso">
-                            <option>Inyectoterapia Básica</option>
-                            <option>Inyectoterapia Avanzada</option>
-                            <option>Ecografías Generales</option>
-                            <option>Lectura de Rayos X</option>
-                            <option>Primeros Auxilios</option>
-                        </select>
+                        <div class="mb-3">
+                            <label>Apellido</label>
+                            <input type="text" class="form-control">
+                        </div>
 
-                        <button type="submit">Enviar</button>
+                        <div class="mb-3">
+                            <label>DNI</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Correo</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Curso</label>
+
+                            <select class="form-control" id="cursoSelect">
+
+                                <option>Inyectoterapia Básica</option>
+                                <option>Inyectoterapia Avanzada</option>
+                                <option>Ecografías Generales</option>
+                                <option>Lectura de Rayos X</option>
+                                <option>Primeros Auxilios</option>
+
+                            </select>
+
+                        </div>
+
+                        <button class="btn btn-primary w-100">
+                            Enviar Matrícula
+                        </button>
 
                     </form>
+
                 </div>
 
             </div>
