@@ -3,214 +3,245 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Bahía</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Capacitaciones Médicas Bahía | Chimbote</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
     <style>
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f8fb;
         }
 
-        /* HEADER */
-
-        header {
-            background: #0a6ebd;
-            color: white;
-            padding: 20px;
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        /* HERO */
 
         .hero {
-            background: url('https://images.unsplash.com/photo-1580281657527-47cda1e2e0b9') center/cover;
+            background: linear-gradient(rgba(0, 60, 120, 0.75), rgba(0, 60, 120, 0.75)),
+                url('https://images.unsplash.com/photo-1581093458791-9d0f6b4a3c5c');
+            background-size: cover;
+            background-position: center;
             color: white;
-            text-align: center;
-            padding: 120px 20px;
+            padding: 120px 0;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 3rem;
         }
 
-        .hero p {
-            font-size: 20px;
+        .section-title {
+            font-weight: 700;
+            color: #0d3b66;
         }
 
-        /* SECCIONES */
-
-        .section {
-            padding: 60px 20px;
+        .card-curso {
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
+        .card-curso:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #0a6ebd;
+        .icono-curso {
+            font-size: 40px;
+            color: #0d6efd;
         }
 
-        /* SERVICIOS */
-
-        .servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #1b1b1b;
+        .ubicacion {
+            background: #0d3b66;
             color: white;
-            text-align: center;
-            padding: 30px;
+            padding: 60px 0;
         }
 
-        footer p {
-            margin: 5px;
-        }
-
-        .contacto-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .contacto-col p {
-            margin: 10px 0;
-        }
-
-        /* Responsive para celular */
-
-        @media (max-width:768px) {
-            .contacto-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .fila-contacto {
-            display: flex;
-            gap: 40px;
-        }
-
-        .columna {
-            flex: 1;
-        }
-
-        .columna p {
-            margin: 10px 0;
+        .footer {
+            background: #0a2744;
+            color: white;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-
-    <header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <h2>Clínica Bahía</h2>
 
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Servicios</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Contacto</a>
-            </nav>
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="bi bi-heart-pulse"></i> Capacitaciones Médicas Bahía
+            </a>
 
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                </ul>
+
+            </div>
         </div>
-    </header>
+    </nav>
+
 
     <!-- HERO -->
+    <section class="hero text-center" id="inicio">
 
-    <section class="hero">
+        <div class="container" data-aos="fade-up">
 
-        <h1 style="color: black;">Bienvenidos a Clínica Bahía</h1>
-        <p style="color: black;">Tu salud es nuestra prioridad. Atención médica profesional y tecnología de última
-            generación.</p>
+            <h1>Capacitaciones Médicas Bahía</h1>
 
-    </section>
-
-    <!-- NOSOTROS -->
-
-    <section class="section">
-
-        <div class="container">
-
-            <h2>Sobre Nosotros</h2>
-
-            <p>
-                Clínica Bahía es un centro médico comprometido con brindar atención de calidad,
-                contando con un equipo de profesionales altamente capacitados y tecnología moderna.
-                Nuestro objetivo es ofrecer diagnósticos precisos, tratamientos eficaces y una
-                experiencia médica segura y confiable para todos nuestros pacientes.
+            <p class="lead mt-3">
+                Dirigido a estudiantes y profesionales de la salud
             </p>
 
-            <p>
-                Desde nuestra fundación, hemos trabajado para convertirnos en una clínica de
-                referencia en la región, ofreciendo múltiples especialidades médicas y un servicio
-                humano centrado en el bienestar integral de nuestros pacientes.
-            </p>
+            <a href="#cursos" class="btn btn-light btn-lg mt-4">
+                Ver Cursos
+            </a>
 
         </div>
 
     </section>
 
-    <!-- SERVICIOS -->
 
-    <section class="section" style="background:#eef2f7;">
+    <!-- CURSOS -->
+    <section class="py-5" id="cursos">
 
         <div class="container">
 
-            <h2>Nuestros Servicios</h2>
+            <h2 class="text-center section-title mb-5">
+                Nuestros Cursos
+            </h2>
 
-            <div class="servicios">
+            <div class="row g-4">
 
-                <div class="card">
-                    <h3>Consulta Médica</h3>
-                    <p>Atención médica general y especializada con profesionales altamente capacitados.</p>
+                <!-- INYECTOTERAPIA BASICA -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+                    <div class="card card-curso p-4 h-100 text-center">
+
+                        <div class="icono-curso mb-3">
+                            <i class="bi bi-syringe"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Curso de Inyectoterapia Básica
+                        </h5>
+
+                        <p class="text-muted">
+                            Primero para personas que están comenzando en el mundo de la inyectoterapia.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Laboratorio Clínico</h3>
-                    <p>Realizamos análisis clínicos con equipos modernos para resultados rápidos y confiables.</p>
+
+                <!-- INYECTOTERAPIA AVANZADA -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="card card-curso p-4 h-100 text-center">
+
+                        <div class="icono-curso mb-3">
+                            <i class="bi bi-hospital"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Curso de Inyectoterapia Avanzada
+                        </h5>
+
+                        <p class="text-muted">
+                            Técnicas avanzadas para personal de salud con conocimientos previos.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Diagnóstico por Imágenes</h3>
-                    <p>Ecografías, rayos X y estudios especializados para un diagnóstico preciso.</p>
+
+                <!-- ECOGRAFIAS -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="card card-curso p-4 h-100 text-center">
+
+                        <div class="icono-curso mb-3">
+                            <i class="bi bi-activity"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Curso de Ecografías Generales y Especiales
+                        </h5>
+
+                        <p class="text-muted">
+                            Interpretación y práctica clínica con equipos ecográficos.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Emergencias</h3>
-                    <p>Atención de emergencias médicas con personal preparado y atención inmediata.</p>
+
+                <!-- RAYOS X -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up">
+
+                    <div class="card card-curso p-4 h-100 text-center">
+
+                        <div class="icono-curso mb-3">
+                            <i class="bi bi-x-ray"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Curso de Lectura de Rayos X
+                        </h5>
+
+                        <p class="text-muted">
+                            Aprende a interpretar radiografías de forma profesional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIMEROS AUXILIOS -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="card card-curso p-4 h-100 text-center">
+
+                        <div class="icono-curso mb-3">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Curso de Primeros Auxilios
+                        </h5>
+
+                        <p class="text-muted">
+                            Capacitación esencial para actuar ante emergencias médicas.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -219,40 +250,52 @@
 
     </section>
 
-    <!-- CONTACTO -->
-    <section class="section">
 
-        <div class="container">
+    <!-- UBICACION -->
+    <section class="ubicacion text-center" id="ubicacion">
 
-            <h2>Contacto</h2>
+        <div class="container" data-aos="fade-up">
 
-            <div class="fila-contacto">
+            <h2 class="fw-bold mb-3">
+                Ubicación
+            </h2>
 
-                <div class="columna">
-                    <p><strong>Dirección:</strong> Av. Principal 123 - Chimbote</p>
-                    <p><strong>Teléfono:</strong> (043) 123456</p>
-                    <p><strong>Email:</strong> contacto@clinicabahia.com</p>
-                </div>
+            <p class="lead">
+                Urb. Santa Rosa F'29 <br>
+                A media cuadra de Clínica Bahía – Chimbote
+            </p>
 
-                <div class="columna">
-                    <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 7:00 PM</p>
-                    <p><strong>Emergencias:</strong> Atención 24 horas</p>
-                    <p><strong>WhatsApp:</strong> +51 999 888 777</p>
-                </div>
-
-            </div>
+            <i class="bi bi-geo-alt-fill" style="font-size:40px"></i>
 
         </div>
 
     </section>
+
+
     <!-- FOOTER -->
+    <footer class="footer text-center">
 
-    <footer>
+        <div class="container">
 
-        <p>© 2026 Clínica Bahía</p>
-        <p>Todos los derechos reservados</p>
+            <p class="mb-0">
+                © 2026 Capacitaciones Médicas Bahía – Chimbote
+            </p>
+
+        </div>
 
     </footer>
+
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
 
 </body>
 
