@@ -25,10 +25,9 @@ $sql = "INSERT INTO matriculas
 (nombre,apellido,dni,telefono,correo,curso) 
 VALUES 
 ('$nombre','$apellido','$dni','$telefono','$correo','$curso')";
-
 if ($conn->query($sql)) {
 
-    echo "Registro guardado correctamente";
+    header("Location: index.html?registro=ok");
 } else {
 
     echo "Error SQL: " . $conn->error;
