@@ -1,6 +1,6 @@
 <?php
 
-$servername = "132.148.181.41";
+$servername = "localhost";
 $username = "cesarxd365";
 $password = "&DGFl8=n(_qU,";
 $dbname = "clinicabahia";
@@ -19,9 +19,9 @@ $correo = $_POST['correo'];
 $curso = $_POST['curso'];
 
 $sql = "INSERT INTO matriculas 
-(nombre,apellido,dni,telefono,correo,curso)
+(nombre,apellido,dni,telefono,correo,curso,fecha)
 VALUES 
-('$nombre','$apellido','$dni','$telefono','$correo','$curso')";
+('$nombre','$apellido','$dni','$telefono','$correo','$curso',now())";
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro guardado correctamente";
