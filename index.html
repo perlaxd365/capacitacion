@@ -344,32 +344,37 @@
 
                 <div class="modal-body">
 
-                    <form>
+                    <form action="guardar.php" method="POST">
 
                         <div class="mb-3">
                             <label>Nombre</label>
-                            <input type="text" class="form-control">
+                            <input name="nombre" type="text" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label>Apellido</label>
-                            <input type="text" class="form-control">
+                            <input name="apellido" type="text" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label>DNI</label>
-                            <input type="text" class="form-control">
+                            <input name="dni" type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Teléfono</label>
+                            <input name="telefono" type="text" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label>Correo</label>
-                            <input type="email" class="form-control">
+                            <input type="email" name="correo" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label>Curso</label>
 
-                            <select class="form-control" id="cursoSelect">
+                            <select class="form-control" id="cursoSelect" name="curso">
 
                                 <option>Inyectoterapia Básica</option>
                                 <option>Inyectoterapia Avanzada</option>
@@ -381,7 +386,7 @@
 
                         </div>
 
-                        <button class="btn btn-primary w-100">
+                        <button type="submit" class="btn btn-primary w-100">
                             Enviar Matrícula
                         </button>
 
