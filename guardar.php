@@ -3,10 +3,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$conn = new mysqli("localhost", "cesarxd365", "~-aIye)Wol]b", "clinicabahia");
+$servername = "localhost";
+$username = "cesarxd365";
+$password = "R+%I8yaE8^jA";
+$dbname = "clinicabahia";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("Error conexión: " . $conn->connect_error);
 }
 
 $nombre = $_POST['nombre'] ?? '';
@@ -16,17 +21,17 @@ $telefono = $_POST['telefono'] ?? '';
 $correo = $_POST['correo'] ?? '';
 $curso = $_POST['curso'] ?? '';
 
-$sql = "INSERT INTO matriculas
-(nombre,apellido,dni,telefono,correo,curso)
-VALUES
+$sql = "INSERT INTO matriculas 
+(nombre,apellido,dni,telefono,correo,curso) 
+VALUES 
 ('$nombre','$apellido','$dni','$telefono','$correo','$curso')";
 
 if ($conn->query($sql)) {
 
-    header("Location: index.html?registro=ok");
+    echo "Registro guardado correctamente";
 } else {
 
-    echo "Error: " . $conn->error;
+    echo "Error SQL: " . $conn->error;
 }
 
 $conn->close();
