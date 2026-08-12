@@ -1,0 +1,5 @@
+<?php
+require_once __DIR__ . '/../../admin_auth.php';
+use App\Repositories\CertificadoRepository;
+$id=(int)($_POST['id_matricula']??0); $data=['id_matricula'=>$id,'fecha_inicio'=>$_POST['fecha_inicio']??'','fecha_fin'=>$_POST['fecha_fin']??'','horas'=>(int)($_POST['horas']??0),'docente'=>trim($_POST['docente']??''),'modalidad'=>$_POST['modalidad']??'','nota'=>$_POST['nota']??'','observaciones'=>trim($_POST['observaciones']??'')];
+try{if(!$data['fecha_inicio']||!$data['fecha_fin']||strtotime($data['fecha_fin'])<strtotime($data['fecha_inicio'])||$data['horas']<=0)throw new RuntimeException('Revisa fechas y horas académicas.'); if($data['nota']!=='' && ((float)$data['nota']<0||(float)$data['nota']>20))throw new RuntimeException('La nota debe estar entre 0 y 20.'); $codigo=(new CertificadoRepository(db()))->create($data);flash('success','Certificado emitido','Código: '.$codigo);}catch(Throwable $e){flash('error','No se pudo emitir',$e->getMessage());} redirect('/admin/matriculas/show.php?id='.$id);
