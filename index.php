@@ -6,6 +6,57 @@ require_once __DIR__ . '/app/bootstrap.php';
 <?php
 include 'template/header.php';
 ?>
+<style>
+    /* Marco de imagen: la foto se mantiene completa dentro del área */
+    .card-curso>div:first-child {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        background: #f7fbfc;
+        border-radius: 12px 12px 0 0;
+    }
+
+    /* Imagen completa, sin recorte */
+    .card-curso .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        display: block;
+        animation: flotacionTarjeta 3.8s ease-in-out infinite;
+        transform-origin: center center;
+        will-change: transform;
+    }
+
+    /* Subida y bajada suave, siempre dentro del marco */
+    @keyframes flotacionTarjeta {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    /* Al pasar el mouse, se pausa en una posición ligeramente elevada */
+    .card-curso:hover .card-img-top {
+        animation-play-state: paused;
+        transform: translateY(-5px);
+        transition: transform .35s ease;
+    }
+
+    /* Accesibilidad: respeta la preferencia de reducir movimiento */
+    @media (prefers-reduced-motion: reduce) {
+        .card-curso .card-img-top {
+            animation: none;
+            transform: none;
+        }
+    }
+</style>
+
 
 <body>
 
@@ -255,36 +306,26 @@ include 'template/header.php';
                                 </div>
 
                                 <h5 class="fw-bold">
-                                    Preparación Preuniversitaria para Medicina
+                                    🔥 ¡INSCRIPCIÓN GRATUITA AL CONCURSO PARA INGRESAR A MEDICINA! 🩺📚
                                 </h5>
 
                                 <hr>
 
                                 <ul style="text-align:left;">
-                                    <li class="text-muted">🦴 Anatomía y Fisiología</li>
-                                    <li class="text-muted">🧬 Biología</li>
-                                    <li class="text-muted">⚗️ Química y Física</li>
-                                    <li class="text-muted">📐 Tópicos Selectos de Matemática</li>
-                                    <li class="text-muted">🎯 Enfoque en exámenes de admisión</li>
-                                    <li class="text-muted">👨‍🏫 Docentes con experiencia</li>
+                                    <li class="text-muted">🎓 02 becas + 05 medias becas</li>
+                                    <li class="text-muted">📝 01 examen de evaluación</li>
+                                    <li class="text-muted">👩‍🎓 Dirigido a escolares y principiantes</li>
+                                    <li class="text-muted">🧠 Anatomía · 🧬 Biología · ⚛️ Física</li>
+                                    <li class="text-muted">🧪 Química · ➗ Matemáticas</li>
+                                    <li class="text-muted">📅 Domingo 16 · ⏰ 04:00 p. m.</li>
+                                    <li class="text-muted">📍 Chimbote – Urb. Santa Rosa F'30</li>
+                                    <li class="text-muted">📌 A media cuadra de Clínica Bahía</li>
                                 </ul>
 
                                 <hr>
 
-                                <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> 19 de agosto
-                                </p>
-
-                                <p class="text-muted mb-1">
-                                    <strong>📚 Clases:</strong> Miércoles, Viernes y Sábado
-                                </p>
-
-                                <p class="text-muted mb-1">
-                                    <strong>🎓 Dirigido a:</strong> 3.°, 4.° y 5.° de secundaria
-                                </p>
-
                                 <p class="text-muted mb-3">
-                                    <strong>💻 Modalidad:</strong> Presencial
+                                    <strong>🎁 Inscripción:</strong> GRATUITA
                                 </p>
 
                                 <div style="
@@ -296,7 +337,7 @@ include 'template/header.php';
                     font-size:13px;
                     font-weight:600;
                     color:#087f23;">
-                                    🎁 La inscripción se realiza mediante Google Forms.
+                                    🎁 La inscripción al concurso es totalmente GRATUITA.
                                 </div>
 
                                 <div style="
@@ -307,7 +348,7 @@ include 'template/header.php';
                     margin-bottom:15px;
                     font-size:13px;
                     color:#7a5200;">
-                                    📖 Preparación para UPCH, UNMSM, UNS y otras universidades.
+                                    🎯 Concurso para obtener becas y medias becas de preparación preuniversitaria para Medicina.
                                 </div>
 
                             </div>
@@ -1497,7 +1538,7 @@ include 'template/header.php';
                                     <option>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
 
                                     <option>Lectura Radiológica: Cabeza, Columna y Extremidades (De lo Normal a lo Patológico)</option>
-                                    
+
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
