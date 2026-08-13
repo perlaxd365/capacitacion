@@ -132,6 +132,94 @@ include 'template/header.php';
             </h2>
 
             <div class="row g-4">
+
+
+                <!-- INYECTOTERAPIA -->
+                <div class="col-md-4 d-flex" data-aos="fade-up">
+                    <div class="card card-curso w-100"
+                        style="border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);"
+                        onclick="abrirFormulario('Inyectoterapia Básica')">
+
+                        <div style="position: relative;">
+                            <img src="img/INYECTO_BASICA.png" class="card-img-top">
+                            <div class="card-img-overlay-custom"></div>
+
+                            <span style="
+                                background:#19B5C8;
+                                color:white;
+                                padding:6px 12px;
+                                border-radius:20px;
+                                font-size:12px;
+                                position:absolute;
+                                top:10px;
+                                left:10px;
+                                font-weight:bold;">
+                                💉 ACTIVO
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+                            <div>
+                                <div class="icono-curso mb-2">
+                                    <i class="fa-solid fa-syringe"></i>
+                                </div>
+
+                                <h5 class="fw-bold">Inyectoterapia Básica</h5>
+                                <hr>
+
+                                <ul>
+                                    <li class="text-muted">
+                                        📌 Ideal para:
+                                        Personas que desean adquirir una habilidad práctica desde cero y mejorar sus
+                                        oportunidades en el sector salud
+                                    </li>
+
+                                    <li class="text-muted">
+                                        📅 Fecha: Sábado 15 de agosto
+                                    </li>
+
+                                    <li class="text-muted">
+                                        👨‍⚕️ Ponente:
+                                        Ysabel Torres (Encargada en Clínica Bahía)
+                                        Médico Anestesiólogo (especialista en procedimientos clínicos)
+                                    </li>
+
+                                    <li class="text-muted">
+                                        📍 Ubicación:
+                                        Urb. Santa Rosa F'30
+                                        A media cuadra de Clínica Bahía – Nuevo Chimbote
+                                    </li>
+                                </ul>
+
+                                <hr>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    ✅ Incluye materiales + certificación
+                                </p>
+
+                                <p class="text-muted mb-2">
+                                    <strong>📍 Modalidad:</strong> Presencial
+                                </p>
+
+                                <span class="badge-curso mb-3 d-inline-block" style="font-size:18px;">
+                                    S/30
+                                </span>
+
+                                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
+                                    ⚠️ Cupos limitados
+                                </p>
+                            </div>
+
+                            <button class="btn btn-curso text-white w-100"
+                                style="background:#19B5C8; border:none;">
+                                🚀 Reservar mi vacante
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
                 <!-- PREUNIVERSITARIO MEDICINA -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
                     <div class="card card-curso w-100"
@@ -154,7 +242,7 @@ include 'template/header.php';
                 top:10px;
                 left:10px;
                 font-weight:bold;">
-                                🎁 GRATUITO
+                                🎁 ASPIRANTES A MEDICINA
                             </span>
                         </div>
 
@@ -184,7 +272,7 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> 12 de agosto
+                                    <strong>📅 Inicio:</strong> 19 de agosto
                                 </p>
 
                                 <p class="text-muted mb-1">
@@ -196,7 +284,7 @@ include 'template/header.php';
                                 </p>
 
                                 <p class="text-muted mb-3">
-                                    <strong>💻 Modalidad:</strong> Virtual
+                                    <strong>💻 Modalidad:</strong> Presencial
                                 </p>
 
                                 <div style="
@@ -208,7 +296,7 @@ include 'template/header.php';
                     font-size:13px;
                     font-weight:600;
                     color:#087f23;">
-                                    🎁 Curso totalmente GRATUITO. La inscripción se realiza mediante Google Forms.
+                                    🎁 La inscripción se realiza mediante Google Forms.
                                 </div>
 
                                 <div style="
@@ -225,7 +313,7 @@ include 'template/header.php';
                             </div>
 
                             <button class="btn btn-success w-100">
-                                📝 Inscribirme Gratis
+                                📝 Inscribirme
                             </button>
 
                         </div>
@@ -597,82 +685,6 @@ include 'template/header.php';
 
                     </div>
                 </div>
-                <!-- INYECTOTERAPIA -->
-                <div class="col-md-4 d-flex" data-aos="fade-up">
-                    <div class="card card-curso w-100 disabled-card">
-
-                        <div style="position: relative;">
-                            <img src="img/INYECTO_BASICA.png" class="card-img-top">
-                            <div class="card-img-overlay-custom"></div><span style="
-                                background:#dc3545;                                
-                                color:white;
-                                padding:6px 12px;
-                                border-radius:20px;
-                                font-size:12px;
-                                position:absolute;
-                                top:10px;
-                                left:10px;
-                                font-weight:bold;">
-                                💉 FINALIZADO </span>
-                        </div>
-
-                        <div class="card-body">
-                            <div>
-                                <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-syringe"></i>
-                                </div>
-
-                                <h5 class="fw-bold">Inyectoterapia Básica</h5>
-                                <hr>
-                                <p class="text-muted">
-                                <ul>
-                                    <li class="text-muted">
-                                        📌 Ideal para:
-                                        Personas que desean adquirir una habilidad práctica desde cero y mejorar sus
-                                        oportunidades en el sector salud
-                                    </li>
-                                    <li class="text-muted">
-                                        📅 Fecha: Sábado 18 de julio
-                                    </li>
-                                    <li class="text-muted">
-                                        👨‍⚕️ Ponente:
-                                        Ysabel Torres (Encargada en Clínica Bahía)
-                                        Médico Anestesiólogo (especialista en procedimientos clínicos)
-                                    </li>
-                                    <li class="text-muted">
-                                        📍 Ubicación:
-                                        Urb. Santa Rosa F'30
-                                        A media cuadra de Clínica Bahía – Nuevo Chimbote
-                                    </li>
-                                </ul>
-                                </p>
-                                <hr>
-                                <p style="color:#198754; font-size:13px; font-weight:bold;">
-                                    ✅ Certificado incluido
-                                </p>
-
-                                <p class="text-muted mb-2">
-                                    <strong>📍 Modalidad:</strong> Presencial
-                                </p>
-
-                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
-                                    S/30
-                                </span>
-
-                                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
-                                    ⚠️ Cupos limitados
-                                </p>
-                            </div>
-
-
-                            <button class="btn btn-curso disabled text-white w-100">
-                                Finalizado
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
 
                 <!-- INYECTO AVANZADA -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
@@ -1485,11 +1497,12 @@ include 'template/header.php';
                                     <option>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
 
                                     <option>Lectura Radiológica: Cabeza, Columna y Extremidades (De lo Normal a lo Patológico)</option>
-                                    <option>Primeros Auxilios y RCP Básico</option>
+                                    
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
-                                    <option disabled>Inyectoterapia Básica </option>
+                                    <option>Inyectoterapia Básica</option>
+                                    <option disabled>Primeros Auxilios y RCP Básico</option>
                                     <option disabled>Curso Taller de Heridas y Suturas</option>
                                     <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
@@ -1519,7 +1532,8 @@ include 'template/header.php';
     <?php
     include 'template/script.php';
     ?>
-    <?php $flash = consume_flash(); if ($flash): ?>
+    <?php $flash = consume_flash();
+    if ($flash): ?>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 Swal.fire({
