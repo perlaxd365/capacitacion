@@ -279,7 +279,7 @@ include 'template/header.php';
 
                             </div>
 
-                            <button class="btn btn-curs text-white w-100">
+                            <button class="btn btn-curso text-white w-100">
                                 Matricularme
                             </button>
 
