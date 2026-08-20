@@ -185,18 +185,19 @@ include 'template/header.php';
             <div class="row g-4">
 
 
-                <!-- INYECTOTERAPIA -->
+                <!-- HERIDAS Y SUTURAS ACTIVO -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
                     <div class="card card-curso w-100"
-                        style="border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);"
-                        onclick="abrirFormulario('Inyectoterapia Básica')">
+                        onclick="abrirFormulario('Curso Taller de Heridas y Suturas')"
+                        style="cursor:pointer;">
 
                         <div style="position: relative;">
-                            <img src="img/INYECTO_BASICA.png" class="card-img-top">
+                            <img src="img/heridas.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
 
+                            <!-- ETIQUETA ACTIVO -->
                             <span style="
-                                background:#19B5C8;
+                               background:#19B5C8;
                                 color:white;
                                 padding:6px 12px;
                                 border-radius:20px;
@@ -205,66 +206,83 @@ include 'template/header.php';
                                 top:10px;
                                 left:10px;
                                 font-weight:bold;">
-                                💉 ACTIVO
+                                🩹 ACTIVO
                             </span>
+                            🩹 ACTIVO </span>
                         </div>
 
                         <div class="card-body">
+
                             <div>
+
                                 <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-syringe"></i>
+                                    <i class="fa-solid fa-scissors"></i>
                                 </div>
 
-                                <h5 class="fw-bold">Inyectoterapia Básica</h5>
+                                <h5 class="fw-bold">
+                                    Curso Taller de Heridas y Suturas
+                                </h5>
+
                                 <hr>
 
-                                <ul>
+                                <ul style="text-align:left;">
+
                                     <li class="text-muted">
-                                        📌 Ideal para:
-                                        Personas que desean adquirir una habilidad práctica desde cero y mejorar sus
-                                        oportunidades en el sector salud
+                                        ✅ Tipos de heridas y manejo adecuado
                                     </li>
 
                                     <li class="text-muted">
-                                        📅 Fecha: Sábado 15 de agosto
+                                        ✅ Técnicas básicas de sutura
                                     </li>
 
                                     <li class="text-muted">
-                                        👨‍⚕️ Ponente:
-                                        Ysabel Torres (Encargada en Clínica Bahía)
-                                        Médico Anestesiólogo (especialista en procedimientos clínicos)
+                                        ✅ Uso correcto de instrumentos
                                     </li>
 
                                     <li class="text-muted">
-                                        📍 Ubicación:
-                                        Urb. Santa Rosa F'30
-                                        A media cuadra de Clínica Bahía – Nuevo Chimbote
+                                        ✅ Limpieza y curación de heridas
                                     </li>
+
+                                    <li class="text-muted">
+                                        ✅ Práctica guiada y certificado
+                                    </li>
+
                                 </ul>
 
                                 <hr>
 
+                                <p class="text-muted mb-1">
+                                    <strong>📅 Fecha:</strong> Sábado 22 de agosto
+                                </p>
+
+                                <p class="text-muted mb-1">
+                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
+                                </p>
                                 <p style="color:#198754; font-size:13px; font-weight:bold;">
-                                    ✅ Incluye materiales + certificación
+                                    ✅ Materiales incluidos
+                                </p>
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    ✅ Certificado incluido
                                 </p>
 
                                 <p class="text-muted mb-2">
                                     <strong>📍 Modalidad:</strong> Presencial
                                 </p>
 
-                                <span class="badge-curso mb-3 d-inline-block" style="font-size:18px;">
-                                    S/30
+                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
+                                    S/39
                                 </span>
 
                                 <p style="color:#dc3545; font-size:13px; font-weight:bold;">
                                     ⚠️ Cupos limitados
                                 </p>
+
                             </div>
 
-                            <button class="btn btn-curso text-white w-100"
-                                style="background:#19B5C8; border:none;">
-                                🚀 Reservar mi vacante
+                            <button class="btn btn-curso disabled text-white w-100">
+                                Finalizado
                             </button>
+
                         </div>
 
                     </div>
@@ -293,7 +311,7 @@ include 'template/header.php';
                 top:10px;
                 left:10px;
                 font-weight:bold;">
-                                🎁 ASPIRANTES A MEDICINA
+                                🎓 PREPARATORIA MEDICINA
                             </span>
                         </div>
 
@@ -306,27 +324,64 @@ include 'template/header.php';
                                 </div>
 
                                 <h5 class="fw-bold">
-                                    🔥 ¡INSCRIPCIÓN GRATUITA AL CONCURSO PARA INGRESAR A MEDICINA! 🩺📚
+                                    🎓 ¡PREPÁRATE PARA INGRESAR A MEDICINA! 🩺
                                 </h5>
 
                                 <hr>
 
+                                <p class="text-muted">
+                                    ¿Estás en 3.º, 4.º o 5.º de secundaria y sueñas con estudiar Medicina?
+                                </p>
+
+                                <p class="text-muted">
+                                    🚀 Prepárate con una formación enfocada en el ingreso a las carreras de Medicina.
+                                </p>
+
+                                <hr>
+
+                                <strong>📚 ¿QUÉ APRENDERÁS?</strong>
+
                                 <ul style="text-align:left;">
-                                    <li class="text-muted">🎓 02 becas + 05 medias becas</li>
-                                    <li class="text-muted">📝 01 examen de evaluación</li>
-                                    <li class="text-muted">👩‍🎓 Dirigido a escolares y principiantes</li>
-                                    <li class="text-muted">🧠 Anatomía · 🧬 Biología · ⚛️ Física</li>
-                                    <li class="text-muted">🧪 Química · ➗ Matemáticas</li>
-                                    <li class="text-muted">📅 Domingo 16 · ⏰ 04:00 p. m.</li>
-                                    <li class="text-muted">📍 Chimbote – Urb. Santa Rosa F'30</li>
-                                    <li class="text-muted">📌 A media cuadra de Clínica Bahía</li>
+                                    <li class="text-muted">🦴 Anatomía y Fisiología</li>
+                                    <li class="text-muted">🧬 Biología</li>
+                                    <li class="text-muted">⚗️ Química</li>
+                                    <li class="text-muted">📐 Física</li>
+                                    <li class="text-muted">🎯 Tópicos Selectos de Matemática</li>
                                 </ul>
 
                                 <hr>
 
-                                <p class="text-muted mb-3">
-                                    <strong>🎁 Inscripción:</strong> GRATUITA
+                                <p class="text-muted">
+                                    📖 <strong>Desarrollo de acuerdo a los prospectos de:</strong><br>
+                                    UPCH, UNT y UNS
                                 </p>
+
+                                <hr>
+
+                                <strong>👨‍🏫 DOCENTES CON EXPERIENCIA</strong>
+
+                                <p class="text-muted">
+                                    Especializados en preparación preuniversitaria y áreas de Ciencias de la Salud.
+                                </p>
+
+                                <hr>
+
+                                <strong>⏰ HORARIOS</strong>
+
+                                <ul style="text-align:left;">
+                                    <li class="text-muted">
+                                        📅 Miércoles y viernes: 4:00 p. m. – 6:30 p. m.
+                                    </li>
+                                    <li class="text-muted">
+                                        📅 Sábados: 8:00 a. m. – 1:30 p. m.
+                                    </li>
+                                    <li class="text-muted">
+                                        📚 3 días a la semana
+                                    </li>
+                                    <li class="text-muted">
+                                        📖 12 clases al mes
+                                    </li>
+                                </ul>
 
                                 <div style="
                     background:#e8fff1;
@@ -337,18 +392,7 @@ include 'template/header.php';
                     font-size:13px;
                     font-weight:600;
                     color:#087f23;">
-                                    🎁 La inscripción al concurso es totalmente GRATUITA.
-                                </div>
-
-                                <div style="
-                    background:#fff8e1;
-                    border-left:4px solid #f4b400;
-                    padding:12px;
-                    border-radius:10px;
-                    margin-bottom:15px;
-                    font-size:13px;
-                    color:#7a5200;">
-                                    🎯 Concurso para obtener becas y medias becas de preparación preuniversitaria para Medicina.
+                                    🎓 PREPARATORIA PARA INGRESO A MEDICINA
                                 </div>
 
                             </div>
@@ -361,7 +405,6 @@ include 'template/header.php';
 
                     </div>
                 </div>
-
 
                 <!-- CURSO ESPECIAL (CARD) -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
@@ -522,17 +565,16 @@ include 'template/header.php';
 
                     </div>
                 </div>
-                <!-- HERIDAS Y SUTURAS ACTIVO -->
+                <!-- INYECTOTERAPIA -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
                     <div class="card card-curso w-100 disabled-card">
 
                         <div style="position: relative;">
-                            <img src="img/heridas.png" class="card-img-top">
+                            <img src="img/INYECTO_BASICA.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
 
-                            <!-- ETIQUETA ACTIVO -->
                             <span style="
-                               background:#19B5C8;
+                                background:#19B5C8;
                                 color:white;
                                 padding:6px 12px;
                                 border-radius:20px;
@@ -541,80 +583,65 @@ include 'template/header.php';
                                 top:10px;
                                 left:10px;
                                 font-weight:bold;">
-                                🩹 ACTIVO
+                                💉 FINALIZADO
                             </span>
-                            🩹 ACTIVO </span>
                         </div>
 
                         <div class="card-body">
-
                             <div>
-
                                 <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-scissors"></i>
+                                    <i class="fa-solid fa-syringe"></i>
                                 </div>
 
-                                <h5 class="fw-bold">
-                                    Curso Taller de Heridas y Suturas
-                                </h5>
-
+                                <h5 class="fw-bold">Inyectoterapia Básica</h5>
                                 <hr>
 
-                                <ul style="text-align:left;">
-
+                                <ul>
                                     <li class="text-muted">
-                                        ✅ Tipos de heridas y manejo adecuado
+                                        📌 Ideal para:
+                                        Personas que desean adquirir una habilidad práctica desde cero y mejorar sus
+                                        oportunidades en el sector salud
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Técnicas básicas de sutura
+                                        📅 Fecha: Sábado 15 de agosto
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Uso correcto de instrumentos
+                                        👨‍⚕️ Ponente:
+                                        Ysabel Torres (Encargada en Clínica Bahía)
+                                        Médico Anestesiólogo (especialista en procedimientos clínicos)
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Limpieza y curación de heridas
+                                        📍 Ubicación:
+                                        Urb. Santa Rosa F'30
+                                        A media cuadra de Clínica Bahía – Nuevo Chimbote
                                     </li>
-
-                                    <li class="text-muted">
-                                        ✅ Práctica guiada y certificado
-                                    </li>
-
                                 </ul>
 
                                 <hr>
 
-                                <p class="text-muted mb-1">
-                                    <strong>📅 Fecha:</strong> Viernes 17 de julio
-                                </p>
-
-                                <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
-                                </p>
                                 <p style="color:#198754; font-size:13px; font-weight:bold;">
-                                    ✅ Certificado incluido
+                                    ✅ Incluye materiales + certificación
                                 </p>
 
                                 <p class="text-muted mb-2">
                                     <strong>📍 Modalidad:</strong> Presencial
                                 </p>
 
-                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
-                                    S/40
+                                <span class="badge-curso mb-3 d-inline-block" style="font-size:18px;">
+                                    S/30
                                 </span>
 
                                 <p style="color:#dc3545; font-size:13px; font-weight:bold;">
                                     ⚠️ Cupos limitados
                                 </p>
-
                             </div>
 
                             <button class="btn btn-curso disabled text-white w-100">
                                 Finalizado
                             </button>
-
                         </div>
 
                     </div>
@@ -1535,6 +1562,7 @@ include 'template/header.php';
 
                                 <optgroup label="🟢 Cursos Disponibles">
                                     <option>Curso Taller Especializado 3 Meses</option>
+                                    <option>Curso Taller de Heridas y Suturas</option>
                                     <option>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
 
                                     <option>Lectura Radiológica: Cabeza, Columna y Extremidades (De lo Normal a lo Patológico)</option>
@@ -1544,7 +1572,6 @@ include 'template/header.php';
                                 <optgroup label="🟡 Próximamente">
                                     <option>Inyectoterapia Básica</option>
                                     <option disabled>Primeros Auxilios y RCP Básico</option>
-                                    <option disabled>Curso Taller de Heridas y Suturas</option>
                                     <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
                                     <option disabled>Ecografías Generales</option>

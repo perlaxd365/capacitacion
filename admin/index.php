@@ -21,15 +21,101 @@ include __DIR__ . '/layouts/header.php';
 include __DIR__ . '/layouts/nav.php';
 ?>
 <main class="container-fluid px-4 pb-5">
-<div class="d-flex justify-content-between align-items-center mb-4"><div><h2 class="fw-bold mb-1">Dashboard administrativo</h2><p class="text-muted mb-0">Matrículas, cobranzas y certificados en un solo lugar.</p></div><a class="btn btn-primary" href="<?=e(app_url('/admin/matriculas/ficha.php'))?>" style="display:none">Ficha</a></div>
-<div class="row g-3 mb-4">
-<?php $cards=[['Matrículas',(int)$stats['matriculas'],'fa-users','primary'],['Cobrado',money($stats['cobrado']),'fa-circle-check','success'],['Por cobrar',money($stats['pendiente']),'fa-clock','warning'],['Certificados',(int)$stats['certificados'],'fa-certificate','info'],['Entregados',(int)($stats['certificados_entregados'] ?? 0),'fa-hand-holding-heart','secondary']]; foreach($cards as [$label,$value,$icon,$color]): ?><div class="col-6 col-xl"><div class="card stat h-100 p-3 border-start border-<?=$color?> border-4"><div class="small-muted"><i class="fa-solid <?=$icon?> me-1"></i><?=$label?></div><div class="fs-4 fw-bold mt-1"><?=$value?></div></div></div><?php endforeach; ?>
-</div>
-<div class="card filter-card p-3 mb-4"><form class="row g-2 align-items-end"><div class="col-xl-3"><label class="form-label small fw-semibold">Buscar</label><input name="q" class="form-control" value="<?=e($filters['q'])?>" placeholder="Nombre, DNI o curso"></div><div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Curso</label><select name="curso" class="form-select"><option value="">Todos</option><?php foreach($courses as $course): ?><option value="<?=e($course)?>" <?=$filters['curso']===$course?'selected':''?>><?=e($course)?></option><?php endforeach; ?></select></div><div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Pago</label><select name="estado_pago" class="form-select"><option value="">Todos</option><option value="sin_precio" <?=$filters['estado_pago']==='sin_precio'?'selected':''?>>Sin precio</option><option value="pendiente" <?=$filters['estado_pago']==='pendiente'?'selected':''?>>Pendiente</option><option value="pagado" <?=$filters['estado_pago']==='pagado'?'selected':''?>>Pagado</option></select></div><div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Certificado</label><select name="certificado" class="form-select"><option value="">Todos</option><option value="sin" <?=$filters['certificado']==='sin'?'selected':''?>>Sin certificado</option><option value="emitido" <?=$filters['certificado']==='emitido'?'selected':''?>>Emitido</option><option value="anulado" <?=$filters['certificado']==='anulado'?'selected':''?>>Anulado</option></select></div><div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Entrega</label><select name="entrega_certificado" class="form-select"><option value="">Todos</option><option value="pendiente" <?=$filters['entrega_certificado']==='pendiente'?'selected':''?>>Pendiente de entrega</option><option value="entregado" <?=$filters['entrega_certificado']==='entregado'?'selected':''?>>Entregado</option></select></div><div class="col-xl-1 col-md-3"><label class="form-label small fw-semibold">Desde</label><input type="date" name="desde" class="form-control" value="<?=e($filters['desde'])?>"></div><div class="col-xl-1 col-md-3"><label class="form-label small fw-semibold">Hasta</label><input type="date" name="hasta" class="form-control" value="<?=e($filters['hasta'])?>"></div><div class="col-xl-1 col-md-3 d-grid"><button class="btn btn-primary"><i class="fa-solid fa-filter"></i></button></div><div class="col-xl-1 col-md-3 d-grid"><a class="btn btn-outline-secondary" href="<?=e(app_url('/admin/index.php'))?>"><i class="fa-solid fa-rotate-left"></i></a></div></form></div>
-<div class="card overflow-hidden"><div class="p-3 border-bottom d-flex justify-content-between"><div><strong>Matrículas</strong> <span class="badge bg-light text-dark ms-1"><?=count($rows)?></span></div><div class="small-muted">Selecciona “Detalle” para ver pagos y certificado.</div></div><div class="table-responsive"><table class="table table-hover mb-0"><thead class="table-light"><tr><th>ID</th><th>Alumno</th><th>Curso</th><th>Fecha</th><th>Total</th><th>Pagado</th><th>Saldo</th><th>Pago</th><th>Certificado</th><th>Entrega</th><th>Acciones</th></tr></thead><tbody>
-<?php if (!$rows): ?><tr><td colspan="11" class="text-center py-5 text-muted">No se encontraron matrículas con los filtros actuales.</td></tr><?php endif; ?>
-<?php foreach($rows as $row): $ps=payment_status((float)$row['precio_total'],(float)$row['pagado']); ?>
-<tr><td class="fw-semibold">#<?=$row['id']?></td><td><div class="fw-semibold"><?=e($row['nombre'].' '.$row['apellido'])?></div><div class="small-muted">DNI <?=e($row['dni'])?></div></td><td><?=e($row['curso'])?></td><td><?=e(date('d/m/Y',strtotime($row['fecha'])))?></td><td><?=money($row['precio_total'])?></td><td class="text-success fw-semibold"><?=money($row['pagado'])?></td><td class="text-danger fw-semibold"><?=money(max(0,(float)$row['precio_total']-(float)$row['pagado']))?></td><td><span class="badge bg-<?=$ps['class']?>"><?=$ps['label']?></span></td><td><?php if(!$row['certificado_id']): ?><span class="badge bg-secondary">Sin certificado</span><?php elseif($row['certificado_estado']==='ANULADO'): ?><span class="badge bg-danger">Anulado</span><?php else: ?><span class="badge bg-success">Emitido</span><?php endif; ?></td><td><?php if(!$row['certificado_id'] || $row['certificado_estado']==='ANULADO'): ?><span class="text-muted">—</span><?php elseif((int)$row['certificado_entregado']===1): ?><span class="badge bg-success">Entregado</span><div class="small text-muted mt-1"><?=e(date('d/m/Y',strtotime($row['fecha_entrega'])))?></div><?php else: ?><span class="badge bg-warning text-dark">Pendiente</span><?php endif; ?></td><td><div class="btn-group btn-group-sm"><a class="btn btn-outline-primary action-btn" title="Detalle" href="<?=e(app_url('/admin/matriculas/show.php'))?>?id=<?=$row['id']?>"><i class="fa-solid fa-eye"></i></a><?php if((float)$row['precio_total']<=0): ?><a class="btn btn-outline-warning action-btn" title="Asignar precio" href="<?=e(app_url('/admin/matriculas/price.php'))?>?id=<?=$row['id']?>"><i class="fa-solid fa-tag"></i></a><?php elseif((float)$row['pagado'] < (float)$row['precio_total']): ?><a class="btn btn-outline-success action-btn" title="Registrar pago" href="<?=e(app_url('/admin/pagos/create.php'))?>?id=<?=$row['id']?>"><i class="fa-solid fa-money-bill-wave"></i></a><?php endif; ?><?php if(!$row['certificado_id']): ?><a class="btn btn-outline-warning action-btn" title="Emitir certificado" href="<?=e(app_url('/admin/certificados/create.php'))?>?id=<?=$row['id']?>"><i class="fa-solid fa-certificate"></i></a><?php endif; ?><a class="btn btn-outline-danger action-btn" title="Ficha PDF" target="_blank" href="<?=e(app_url('/admin/matriculas/ficha.php'))?>?id=<?=$row['id']?>"><i class="fa-solid fa-file-pdf"></i></a></div></td></tr>
-<?php endforeach; ?></tbody></table></div></div>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">Dashboard administrativo</h2>
+            <p class="text-muted mb-0">Matrículas, cobranzas y certificados en un solo lugar.</p>
+        </div><a class="btn btn-primary" href="<?= e(app_url('/admin/matriculas/ficha.php')) ?>" style="display:none">Ficha</a>
+    </div>
+    <div class="row g-3 mb-4">
+        <?php $cards = [['Matrículas', (int)$stats['matriculas'], 'fa-users', 'primary'], ['Cobrado', money($stats['cobrado']), 'fa-circle-check', 'success'], ['Por cobrar', money($stats['pendiente']), 'fa-clock', 'warning'], ['Certificados', (int)$stats['certificados'], 'fa-certificate', 'info'], ['Entregados', (int)($stats['certificados_entregados'] ?? 0), 'fa-hand-holding-heart', 'secondary']];
+        foreach ($cards as [$label, $value, $icon, $color]): ?><div class="col-6 col-xl">
+                <div class="card stat h-100 p-3 border-start border-<?= $color ?> border-4">
+                    <div class="small-muted"><i class="fa-solid <?= $icon ?> me-1"></i><?= $label ?></div>
+                    <div class="fs-4 fw-bold mt-1"><?= $value ?></div>
+                </div>
+            </div><?php endforeach; ?>
+    </div>
+    <div class="card filter-card p-3 mb-4">
+        <form class="row g-2 align-items-end">
+            <div class="col-xl-3"><label class="form-label small fw-semibold">Buscar</label><input name="q" class="form-control" value="<?= e($filters['q']) ?>" placeholder="Nombre, DNI o curso"></div>
+            <div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Curso</label><select name="curso" class="form-select">
+                    <option value="">Todos</option><?php foreach ($courses as $course): ?><option value="<?= e($course) ?>" <?= $filters['curso'] === $course ? 'selected' : '' ?>><?= e($course) ?></option><?php endforeach; ?>
+                </select></div>
+            <div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Pago</label><select name="estado_pago" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="sin_precio" <?= $filters['estado_pago'] === 'sin_precio' ? 'selected' : '' ?>>Sin precio</option>
+                    <option value="pendiente" <?= $filters['estado_pago'] === 'pendiente' ? 'selected' : '' ?>>Pendiente</option>
+                    <option value="pagado" <?= $filters['estado_pago'] === 'pagado' ? 'selected' : '' ?>>Pagado</option>
+                </select></div>
+            <div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Certificado</label><select name="certificado" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="sin" <?= $filters['certificado'] === 'sin' ? 'selected' : '' ?>>Sin certificado</option>
+                    <option value="emitido" <?= $filters['certificado'] === 'emitido' ? 'selected' : '' ?>>Emitido</option>
+                    <option value="anulado" <?= $filters['certificado'] === 'anulado' ? 'selected' : '' ?>>Anulado</option>
+                </select></div>
+            <div class="col-xl-2 col-md-6"><label class="form-label small fw-semibold">Entrega</label><select name="entrega_certificado" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="pendiente" <?= $filters['entrega_certificado'] === 'pendiente' ? 'selected' : '' ?>>Pendiente de entrega</option>
+                    <option value="entregado" <?= $filters['entrega_certificado'] === 'entregado' ? 'selected' : '' ?>>Entregado</option>
+                </select></div>
+            <div class="col-xl-1 col-md-3"><label class="form-label small fw-semibold">Desde</label><input type="date" name="desde" class="form-control" value="<?= e($filters['desde']) ?>"></div>
+            <div class="col-xl-1 col-md-3"><label class="form-label small fw-semibold">Hasta</label><input type="date" name="hasta" class="form-control" value="<?= e($filters['hasta']) ?>"></div>
+            <div class="col-xl-1 col-md-3 d-grid"><button class="btn btn-primary"><i class="fa-solid fa-filter"></i></button></div>
+            <div class="col-xl-1 col-md-3 d-grid"><a class="btn btn-outline-secondary" href="<?= e(app_url('/admin/index.php')) ?>"><i class="fa-solid fa-rotate-left"></i></a></div>
+        </form>
+    </div>
+    <div class="card overflow-hidden">
+        <div class="p-3 border-bottom d-flex justify-content-between">
+            <div><strong>Matrículas</strong> <span class="badge bg-light text-dark ms-1"><?= count($rows) ?></span></div>
+            <div class="small-muted">Selecciona “Detalle” para ver pagos y certificado.</div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Alumno</th>
+                        <th>Curso</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Pagado</th>
+                        <th>Saldo</th>
+                        <th>Pago</th>
+                        <th>Certificado</th>
+                        <th>Entrega</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (!$rows): ?><tr>
+                            <td colspan="11" class="text-center py-5 text-muted">No se encontraron matrículas con los filtros actuales.</td>
+                        </tr><?php endif; ?>
+                    <?php foreach ($rows as $row): $ps = payment_status((float)$row['precio_total'], (float)$row['pagado']); ?>
+                        <tr>
+                            <td class="fw-semibold">#<?= $row['id'] ?></td>
+                            <td>
+                                <div class="fw-semibold"><?= e($row['nombre'] . ' ' . $row['apellido']) ?></div>
+                                <div class="small-muted">DNI <?= e($row['dni']) ?></div>
+                            </td>
+                            <td><?= e($row['curso']) ?></td>
+                            <td><?= e(date('d/m/Y', strtotime($row['fecha']))) ?></td>
+                            <td><?= money($row['precio_total']) ?></td>
+                            <td class="text-success fw-semibold"><?= money($row['pagado']) ?></td>
+                            <td class="text-danger fw-semibold"><?= money(max(0, (float)$row['precio_total'] - (float)$row['pagado'])) ?></td>
+                            <td><span class="badge bg-<?= $ps['class'] ?>"><?= $ps['label'] ?></span></td>
+                            <td><?php if (!$row['certificado_id']): ?><span class="badge bg-secondary">Sin certificado</span><?php elseif ($row['certificado_estado'] === 'ANULADO'): ?><span class="badge bg-danger">Anulado</span><?php else: ?><span class="badge bg-success">Emitido</span><?php endif; ?></td>
+                            <td><?php if (!$row['certificado_id'] || $row['certificado_estado'] === 'ANULADO'): ?><span class="text-muted">—</span><?php elseif ((int)$row['certificado_entregado'] === 1): ?><span class="badge bg-success">Entregado</span>
+                                    <div class="small text-muted mt-1"><?= e(date('d/m/Y', strtotime($row['fecha_entrega']))) ?></div><?php else: ?><span class="badge bg-warning text-dark">Pendiente</span><?php endif; ?>
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm"><a class="btn btn-outline-primary action-btn" title="Detalle" href="<?= e(app_url('/admin/matriculas/show.php')) ?>?id=<?= $row['id'] ?>"><i class="fa-solid fa-eye"></i></a><?php if ((float)$row['precio_total'] <= 0): ?><a class="btn btn-outline-warning action-btn" title="Asignar precio" href="<?= e(app_url('/admin/matriculas/price.php')) ?>?id=<?= $row['id'] ?>"><i class="fa-solid fa-tag"></i></a><?php elseif ((float)$row['pagado'] < (float)$row['precio_total']): ?><a class="btn btn-outline-success action-btn" title="Registrar pago" href="<?= e(app_url('/admin/pagos/create.php')) ?>?id=<?= $row['id'] ?>"><i class="fa-solid fa-money-bill-wave"></i></a><?php endif; ?><?php if (!$row['certificado_id']): ?><a class="btn btn-outline-warning action-btn" title="Emitir certificado" href="<?= e(app_url('/admin/certificados/create.php')) ?>?id=<?= $row['id'] ?>"><i class="fa-solid fa-certificate"></i></a><?php endif; ?><a class="btn btn-outline-danger action-btn" title="Ficha PDF" target="_blank" href="<?= e(app_url('/admin/matriculas/ficha.php')) ?>?id=<?= $row['id'] ?>"><i class="fa-solid fa-file-pdf"></i></a></div>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>
 <?php include __DIR__ . '/layouts/footer.php'; ?>
