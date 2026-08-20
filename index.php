@@ -279,8 +279,8 @@ include 'template/header.php';
 
                             </div>
 
-                            <button class="btn btn-curso disabled text-white w-100">
-                                Finalizado
+                            <button class="btn btn-curs text-white w-100">
+                                Matricularme
                             </button>
 
                         </div>
