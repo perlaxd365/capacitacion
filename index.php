@@ -55,8 +55,322 @@ include 'template/header.php';
             transform: none;
         }
     }
-</style>
 
+    /* =========================================================
+       CARRUSEL ELEGANTE DE CURSOS - HERO
+       ========================================================= */
+
+    .hero-cursos-carousel {
+        position: relative;
+        width: 100%;
+        max-width: 520px;
+        height: 390px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .hero-cursos-slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0;
+        transform: scale(.92) translateY(15px);
+        filter: blur(3px);
+
+        transition:
+            opacity 1s ease,
+            transform 1.2s cubic-bezier(.22, 1, .36, 1),
+            filter 1s ease;
+
+        pointer-events: none;
+    }
+
+    .hero-cursos-slide.active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+        z-index: 2;
+    }
+
+    .hero-cursos-slide img {
+        width: auto;
+        max-width: 100%;
+        max-height: 380px;
+
+        object-fit: contain;
+        border-radius: 20px;
+
+        filter:
+            drop-shadow(0 18px 35px rgba(0, 0, 0, .22));
+
+        transition: transform 5s ease;
+    }
+
+    .hero-cursos-slide.active img {
+        transform: scale(1.025);
+    }
+
+    /* Pequeño brillo elegante */
+    .hero-cursos-carousel::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(25, 181, 200, .12);
+        filter: blur(45px);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* Indicadores */
+    .hero-cursos-indicators {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 7px;
+        z-index: 10;
+    }
+
+    .hero-cursos-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .45);
+        transition: all .4s ease;
+    }
+
+    .hero-cursos-dot.active {
+        width: 22px;
+        border-radius: 10px;
+        background: #19B5C8;
+    }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+
+        .hero-cursos-carousel {
+            height: 320px;
+            max-width: 100%;
+        }
+
+        .hero-cursos-slide img {
+            max-height: 310px;
+        }
+
+    }
+
+    /* Accesibilidad */
+    @media (prefers-reduced-motion: reduce) {
+
+        .hero-cursos-slide,
+        .hero-cursos-slide img {
+            transition: none !important;
+        }
+
+    }
+</style>
+<style>
+    /* =====================================================
+       HERO - CARRUSEL COVERFLOW GRANDE
+       ===================================================== */
+
+    .hero-coverflow {
+        position: relative;
+        width: 100%;
+        max-width: 760px;
+        height: 500px;
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: visible;
+    }
+
+    .coverflow-track {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .coverflow-slide {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        width: 380px;
+        height: 460px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform-origin: center center;
+
+        transition:
+            transform 1.2s cubic-bezier(.22, 1, .36, 1),
+            opacity 1.1s ease,
+            filter 1.1s ease;
+
+        pointer-events: none;
+    }
+
+    .coverflow-slide img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        border-radius: 24px;
+
+        display: block;
+
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, .25));
+
+        user-select: none;
+    }
+
+
+    /* =====================================================
+       CENTRO — GRANDE Y NÍTIDO
+       ===================================================== */
+
+    .coverflow-slide.center {
+
+        transform:
+            translate(-50%, -50%) translateX(0) scale(1.05);
+
+        opacity: 1;
+
+        filter: blur(0);
+
+        z-index: 5;
+    }
+
+
+    /* =====================================================
+       IZQUIERDA — GRANDE, PERO DIFUMINADA
+       ===================================================== */
+
+    .coverflow-slide.left {
+
+        transform:
+            translate(-50%, -50%) translateX(-275px) scale(.78) rotateY(12deg);
+
+        opacity: .32;
+
+        filter: blur(5px);
+
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       DERECHA — GRANDE, PERO DIFUMINADA
+       ===================================================== */
+
+    .coverflow-slide.right {
+
+        transform:
+            translate(-50%, -50%) translateX(275px) scale(.78) rotateY(-12deg);
+
+        opacity: .32;
+
+        filter: blur(5px);
+
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       IMÁGENES FUERA DE VISTA
+       ===================================================== */
+
+    .coverflow-slide.hidden-left {
+
+        transform:
+            translate(-50%, -50%) translateX(-500px) scale(.60);
+
+        opacity: 0;
+
+        filter: blur(10px);
+
+        z-index: 1;
+    }
+
+    .coverflow-slide.hidden-right {
+
+        transform:
+            translate(-50%, -50%) translateX(500px) scale(.60);
+
+        opacity: 0;
+
+        filter: blur(10px);
+
+        z-index: 1;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 767px) {
+
+        .hero-coverflow {
+
+            height: 380px;
+
+            max-width: 100%;
+
+        }
+
+        .coverflow-slide {
+
+            width: 290px;
+
+            height: 350px;
+
+        }
+
+        .coverflow-slide.left {
+
+            transform:
+                translate(-50%, -50%) translateX(-175px) scale(.68) rotateY(12deg);
+
+        }
+
+        .coverflow-slide.right {
+
+            transform:
+                translate(-50%, -50%) translateX(175px) scale(.68) rotateY(-12deg);
+
+        }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .coverflow-slide {
+
+            transition: none;
+
+        }
+
+    }
+</style>
 
 <body>
 
@@ -103,9 +417,61 @@ include 'template/header.php';
 
 
                 <!-- IMAGEN -->
+                <!-- CARRUSEL DE CURSOS -->
+                <!-- CARRUSEL COVERFLOW DE CURSOS -->
                 <div class="col-md-6 text-center pt-2" data-aos="fade-left">
 
-                    <img src="img/3meses.png" class="img-fluid" style="max-height: 380px; border-radius: 20px;">
+                    <div class="hero-coverflow">
+
+                        <div class="coverflow-track">
+
+                            <div class="coverflow-slide">
+                                <img src="img/3meses.png" alt="Curso especializado en salud">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/heridas.png" alt="Curso de heridas y suturas">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/banco12agosto.png" alt="Preparatoria para medicina">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/INYECTO_BASICA.png" alt="Inyectoterapia básica">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/rayos.png" alt="Lectura radiológica">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/inyecto_avanzada.png" alt="Inyectoterapia avanzada">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/signos.png" alt="Signos vitales">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/primeros_auxilios.png" alt="Primeros auxilios y RCP">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/seminario2.png" alt="Seminario de anatomía">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/farmaco.png" alt="Farmacología">
+                            </div>
+
+                            <div class="coverflow-slide">
+                                <img src="img/seminario.png" alt="Seminario de emergencias">
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -379,7 +745,7 @@ include 'template/header.php';
                                         📚 3 días a la semana
                                     </li>
                                     <li class="text-muted">
-                                        📖 12 clases al mes
+                                        📖 Total de 16 semanas
                                     </li>
                                 </ul>
 
@@ -1563,10 +1929,8 @@ include 'template/header.php';
                                 <optgroup label="🟢 Cursos Disponibles">
                                     <option>Curso Taller Especializado 3 Meses</option>
                                     <option>Curso Taller de Heridas y Suturas</option>
+                                    <option>Preparación de Medicina (16 semanas)</option>
                                     <option>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
-
-                                    <option>Lectura Radiológica: Cabeza, Columna y Extremidades (De lo Normal a lo Patológico)</option>
-
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
@@ -1613,6 +1977,146 @@ include 'template/header.php';
             });
         </script>
     <?php endif; ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const slides = document.querySelectorAll(".hero-cursos-slide");
+            const indicators = document.querySelector(".hero-cursos-indicators");
+
+            if (!slides.length || !indicators) return;
+
+            let current = 0;
+            let interval;
+
+            /* Crear indicadores automáticamente */
+            slides.forEach((_, index) => {
+
+                const dot = document.createElement("span");
+
+                dot.className = "hero-cursos-dot";
+
+                if (index === 0) {
+                    dot.classList.add("active");
+                }
+
+                dot.addEventListener("click", function() {
+                    goToSlide(index);
+                    restartCarousel();
+                });
+
+                indicators.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll(".hero-cursos-dot");
+
+            function goToSlide(index) {
+
+                slides[current].classList.remove("active");
+                dots[current].classList.remove("active");
+
+                current = index;
+
+                slides[current].classList.add("active");
+                dots[current].classList.add("active");
+            }
+
+            function nextSlide() {
+
+                const next = (current + 1) % slides.length;
+
+                goToSlide(next);
+            }
+
+            function startCarousel() {
+
+                interval = setInterval(nextSlide, 4500);
+
+            }
+
+            function restartCarousel() {
+
+                clearInterval(interval);
+
+                startCarousel();
+
+            }
+
+            startCarousel();
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const slides = document.querySelectorAll(".coverflow-slide");
+
+            if (!slides.length) return;
+
+            let current = 0;
+
+            function actualizarCarrusel() {
+
+                const total = slides.length;
+
+                slides.forEach(function(slide, index) {
+
+                    slide.className = "coverflow-slide";
+
+                    let position = (index - current + total) % total;
+
+                    /*
+                     * 0 = centro
+                     * 1 = derecha
+                     * total-1 = izquierda
+                     */
+
+                    if (position === 0) {
+
+                        slide.classList.add("center");
+
+                    } else if (position === 1) {
+
+                        slide.classList.add("right");
+
+                    } else if (position === total - 1) {
+
+                        slide.classList.add("left");
+
+                    } else if (position === 2) {
+
+                        slide.classList.add("hidden-right");
+
+                    } else {
+
+                        slide.classList.add("hidden-left");
+
+                    }
+
+                });
+
+            }
+
+            actualizarCarrusel();
+
+
+            /* ============================================
+               CAMBIO AUTOMÁTICO
+               ============================================ */
+
+            setInterval(function() {
+
+                current++;
+
+                if (current >= slides.length) {
+                    current = 0;
+                }
+
+                actualizarCarrusel();
+
+            }, 4000);
+
+        });
+    </script>
 </body>
 
 </html>
