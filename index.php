@@ -636,7 +636,7 @@ include 'template/header.php';
 
                                 <p class="text-muted mb-1">
                                     <strong>⏰ Horario:</strong>
-                                    5:00 pm – 8:00 pm
+                                    10:00 AM – 1:00 pm
                                 </p>
 
                                 <p class="text-muted mb-2">
