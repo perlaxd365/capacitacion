@@ -3,20 +3,32 @@
        <hr>
    </div><br>
    <!-- UBICACION -->
-   <section class="ubicacion text-center" id="ubicacion">
+   <!-- UBICACIÓN -->
+   <!-- UBICACIÓN -->
+   <section class="ubicacion" id="ubicacion">
 
        <div class="container">
 
-           <h3 class="fw-bold mb-3">
-               Ubicación
-           </h3>
+           <h2 class="text-center text-white section-title mb-4">
+               📍 Encuéntranos aquí
+           </h2>
 
-           <p class="lead">
-               Urb. Santa Rosa F'30<br>
-               A media cuadra de Clínica Bahía – Chimbote
+           <p class="text-center text-white mb-4">
+               Visítanos en nuestra sede de Nuevo Chimbote
            </p>
 
-           <i class="fa-solid fa-location-dot fa-2x"></i>
+           <div class="map">
+               <iframe
+                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.41989308876026!2d-78.5234189!3d-9.1219969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ab85977c0e2a6b%3A0xc037d9d1008f741a!2siep%20hosanna!5e0!3m2!1ses-419!2spe!4v1787583280179!5m2!1ses-419!2spe"
+                   width="100%"
+                   height="450"
+                   style="border:0; border-radius:16px;"
+                   allowfullscreen=""
+                   loading="lazy"
+                   referrerpolicy="strict-origin-when-cross-origin"
+                   title="Ubicación de Capacitaciones Médicas Bahía">
+               </iframe>
+           </div>
 
        </div>
 

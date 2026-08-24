@@ -370,6 +370,35 @@ include 'template/header.php';
         }
 
     }
+
+    .ubicacion {
+        padding: 80px 0;
+    }
+
+    .ubicacion .map {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+    }
+
+    .ubicacion iframe {
+        display: block;
+        width: 100%;
+        min-height: 450px;
+    }
+
+    @media (max-width: 767px) {
+
+        .ubicacion {
+            padding: 60px 15px;
+        }
+
+        .ubicacion iframe {
+            min-height: 350px;
+        }
+
+    }
 </style>
 
 <body>
