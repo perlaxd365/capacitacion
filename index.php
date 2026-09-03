@@ -579,38 +579,29 @@ include 'template/header.php';
 
             <div class="row g-4">
 
-                <!-- CURSO PRIMEROS AUXILIOS + RCP ACTIVO -->
+                <!-- SIGNOS VITALES -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
-
                     <div class="card card-curso w-100"
-                        onclick="abrirFormulario('Primeros Auxilios y RCP Basico')"
-                        style="
-            cursor:pointer;
-            border:2px solid #19B5C8;
-            box-shadow:0 15px 40px rgba(25,181,200,.20);
-        ">
+                        onclick="abrirFormulario('Curso Taller de Signos Vitales')"
+                        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
 
                         <div style="position: relative;">
-
-                            <img src="img/primeros_auxilios.png"
-                                class="card-img-top">
-
+                            <img src="img/signos.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
 
                             <!-- ETIQUETA ACTIVO -->
                             <span style="
-                background:#19B5C8;
-                color:white;
-                padding:6px 12px;
-                border-radius:20px;
-                font-size:12px;
-                position:absolute;
-                top:10px;
-                left:10px;
-                font-weight:bold;">
-                                🚑 ACTIVO
+                                        background:#19B5C8;
+                                        color:white;
+                                        padding:6px 12px;
+                                        border-radius:20px;
+                                        font-size:12px;
+                                        position:absolute;
+                                        top:10px;
+                                        left:10px;
+                                        font-weight:bold;">
+                                🩺 ACTIVO
                             </span>
-
                         </div>
 
                         <div class="card-body">
@@ -622,36 +613,37 @@ include 'template/header.php';
                                 </div>
 
                                 <h5 class="fw-bold">
-                                    Primeros Auxilios y RCP Básico
+                                    Curso Taller de Signos Vitales
                                 </h5>
 
                                 <hr>
 
-                                <p class="text-muted">
-                                    Aprende de manera práctica cómo actuar correctamente
-                                    ante situaciones de emergencia.
-                                </p>
-
                                 <ul style="text-align:left;">
 
                                     <li class="text-muted">
-                                        🔥 Quemaduras
+                                        ✅ Toma de presión arterial
                                     </li>
 
                                     <li class="text-muted">
-                                        🩸 Hemorragias
+                                        ✅ Frecuencia cardiaca y respiratoria
                                     </li>
 
                                     <li class="text-muted">
-                                        ☠️ Intoxicaciones
+                                        ✅ Saturación de oxígeno y temperatura
                                     </li>
 
                                     <li class="text-muted">
-                                        🐍 Mordeduras
+                                        ✅ Interpretación básica de signos vitales
                                     </li>
 
                                     <li class="text-muted">
-                                        ❤️ RCP Básico
+                                        ✅ Práctica guiada
+                                    </li>
+                                    <li class="text-muted">
+                                        ✅ Materiales incluidos
+                                    </li>
+                                    <li class="text-muted">
+                                        ✅ Certificado incluido
                                     </li>
 
                                 </ul>
@@ -659,94 +651,34 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong>
-                                    Viernes 28 de agosto
+                                    <strong>📅 Inicio:</strong> Sábado 05 de septiembre del 2026
                                 </p>
 
                                 <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong>
-                                    10:00 AM – 1:00 pm
+                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
                                 </p>
 
                                 <p class="text-muted mb-2">
-                                    <strong>📍 Modalidad:</strong>
-                                    Presencial
+                                    <strong>📍 Modalidad:</strong> Presencial
                                 </p>
 
-                                <!-- PROMOCIÓN 50% -->
-                                <div style="
-                                        background:#e8fff1;
-                                        border-left:4px solid #00c853;
-                                        padding:12px;
-                                        border-radius:10px;
-                                        margin-bottom:15px;
-                                        text-align:center;
-                                    ">
+                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
+                                    S/29
+                                </span>
 
-                                    <div style="
-                                        color:#dc3545;
-                                        font-size:14px;
-                                        font-weight:bold;
-                                        margin-bottom:5px;
-                                    ">
-                                        🔥 50% DE DESCUENTO
-                                    </div>
-
-                                    <div style="
-                                        color:#777;
-                                        text-decoration:line-through;
-                                        font-size:14px;
-                                    ">
-                                        Precio regular: S/58
-                                    </div>
-
-                                    <div style="
-                                        color:#0d6efd;
-                                        font-size:32px;
-                                        font-weight:800;
-                                        line-height:1.2;
-                                    ">
-                                        S/29
-                                    </div>
-
-                                    <div style="
-                                            color:#198754;
-                                            font-size:13px;
-                                            font-weight:bold;
-                                        ">
-                                        ¡50% de descuento aplicado!
-                                    </div>
-
-                                </div>
-
-                                <p style="
-                                    color:#198754;
-                                    font-size:13px;
-                                    font-weight:bold;
-                                    text-align:center;
-                                ">
-                                    ✅ Curso práctico
-                                </p>
-
-                                <p style="
-                                    color:#dc3545;
-                                    font-size:13px;
-                                    font-weight:bold;
-                                    text-align:center;
-                                ">
+                                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
                                     ⚠️ Cupos limitados
                                 </p>
 
                             </div>
 
                             <button class="btn btn-curso text-white w-100">
-                                🚑 Inscribirme ahora
+                                🩺 Inscribirme ahora
                             </button>
 
                         </div>
 
                     </div>
-
                 </div>
 
                 <!-- PREUNIVERSITARIO MEDICINA -->
@@ -1026,6 +958,169 @@ include 'template/header.php';
                     </div>
                 </div>
 
+                <!-- CURSO PRIMEROS AUXILIOS + RCP FINALIZADO -->
+                <div class="col-md-4 d-flex" data-aos="fade-up">
+
+                    <div class="card card-curso w-100 disabled-card">
+
+                        <div style="position: relative;">
+
+                            <img src="img/primeros_auxilios.png"
+                                class="card-img-top">
+
+                            <div class="card-img-overlay-custom"></div>
+
+                            <!-- ETIQUETA FINALIZADO -->
+                            <span style="
+                background:#dc3545;
+                color:white;
+                padding:6px 12px;
+                border-radius:20px;
+                font-size:12px;
+                position:absolute;
+                top:10px;
+                left:10px;
+                font-weight:bold;">
+                                🚑 FINALIZADO
+                            </span>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div>
+
+                                <div class="icono-curso mb-2">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    Primeros Auxilios y RCP Básico
+                                </h5>
+
+                                <hr>
+
+                                <p class="text-muted">
+                                    Aprende de manera práctica cómo actuar correctamente
+                                    ante situaciones de emergencia.
+                                </p>
+
+                                <ul style="text-align:left;">
+
+                                    <li class="text-muted">
+                                        🔥 Quemaduras
+                                    </li>
+
+                                    <li class="text-muted">
+                                        🩸 Hemorragias
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ☠️ Intoxicaciones
+                                    </li>
+
+                                    <li class="text-muted">
+                                        🐍 Mordeduras
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ❤️ RCP Básico
+                                    </li>
+
+                                </ul>
+
+                                <hr>
+
+                                <p class="text-muted mb-1">
+                                    <strong>📅 Inicio:</strong>
+                                    Viernes 28 de agosto
+                                </p>
+
+                                <p class="text-muted mb-1">
+                                    <strong>⏰ Horario:</strong>
+                                    10:00 AM – 1:00 pm
+                                </p>
+
+                                <p class="text-muted mb-2">
+                                    <strong>📍 Modalidad:</strong>
+                                    Presencial
+                                </p>
+
+                                <!-- PROMOCIÓN 50% -->
+                                <div style="
+                                        background:#e8fff1;
+                                        border-left:4px solid #00c853;
+                                        padding:12px;
+                                        border-radius:10px;
+                                        margin-bottom:15px;
+                                        text-align:center;
+                                    ">
+
+                                    <div style="
+                                        color:#dc3545;
+                                        font-size:14px;
+                                        font-weight:bold;
+                                        margin-bottom:5px;
+                                    ">
+                                        🔥 50% DE DESCUENTO
+                                    </div>
+
+                                    <div style="
+                                        color:#777;
+                                        text-decoration:line-through;
+                                        font-size:14px;
+                                    ">
+                                        Precio regular: S/58
+                                    </div>
+
+                                    <div style="
+                                        color:#0d6efd;
+                                        font-size:32px;
+                                        font-weight:800;
+                                        line-height:1.2;
+                                    ">
+                                        S/29
+                                    </div>
+
+                                    <div style="
+                                            color:#198754;
+                                            font-size:13px;
+                                            font-weight:bold;
+                                        ">
+                                        ¡50% de descuento aplicado!
+                                    </div>
+
+                                </div>
+
+                                <p style="
+                                    color:#198754;
+                                    font-size:13px;
+                                    font-weight:bold;
+                                    text-align:center;
+                                ">
+                                    ✅ Curso práctico
+                                </p>
+
+                                <p style="
+                                    color:#dc3545;
+                                    font-size:13px;
+                                    font-weight:bold;
+                                    text-align:center;
+                                ">
+                                    ⚠️ Cupos limitados
+                                </p>
+
+                            </div>
+
+                            <button class="btn btn-curso disabled text-white w-100" disabled>
+                                🚑 Finalizado
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
                 <!-- HERIDAS Y SUTURAS FINALIZADO -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
@@ -1411,99 +1506,6 @@ include 'template/header.php';
                 </div>
 
 
-                <!-- SIGNOS VITALES -->
-                <div class="col-md-4 d-flex" data-aos="fade-up">
-                    <div class="card card-curso w-100 disabled-card">
-
-                        <div style="position: relative;">
-                            <img src="img/signos.png" class="card-img-top">
-                            <div class="card-img-overlay-custom"></div>
-
-                            <!-- ETIQUETA ACTIVO -->
-                            <span style="
-                                        background:#19B5C8;
-                                        color:white;
-                                        padding:6px 12px;
-                                        border-radius:20px;
-                                        font-size:12px;
-                                        position:absolute;
-                                        top:10px;
-                                        left:10px;
-                                        font-weight:bold;">
-                                🩺 ACTIVO
-                            </span>
-                        </div>
-
-                        <div class="card-body">
-
-                            <div>
-
-                                <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-heart-pulse"></i>
-                                </div>
-
-                                <h5 class="fw-bold">
-                                    Curso Taller de Signos Vitales
-                                </h5>
-
-                                <hr>
-
-                                <ul style="text-align:left;">
-
-                                    <li class="text-muted">
-                                        ✅ Toma de presión arterial
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Frecuencia cardiaca y respiratoria
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Saturación de oxígeno y temperatura
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Interpretación básica de signos vitales
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Práctica guiada y certificado
-                                    </li>
-
-                                </ul>
-
-                                <hr>
-
-                                <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> 16 de mayo del 2026
-                                </p>
-
-                                <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
-                                </p>
-
-                                <p class="text-muted mb-2">
-                                    <strong>📍 Modalidad:</strong> Presencial
-                                </p>
-
-                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
-                                    S/29
-                                </span>
-
-                                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
-                                    ⚠️ Cupos limitados
-                                </p>
-
-                            </div>
-
-                            <button class="btn btn-curso disabled text-white w-100">
-                                Finalizado
-                            </button>
-
-                        </div>
-
-                    </div>
-                </div>
 
 
 
@@ -2130,16 +2132,15 @@ include 'template/header.php';
                             <select class="form-control" id="cursoSelect" name="curso">
 
                                 <optgroup label="🟢 Cursos Disponibles">
+                                    <option>Curso Taller de Signos Vitales</option>
                                     <option>Primeros Auxilios y RCP Básico</option>
                                     <option>Curso Taller Especializado 3 Meses</option>
-                                    <option>Curso Taller de Heridas y Suturas</option>
                                     <option>Preparación de Medicina (16 semanas)</option>
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
                                     <option disabled>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
                                     <option disabled>Inyectoterapia Básica</option>
-                                    <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
                                     <option disabled>Ecografías Generales</option>
                                     <option disabled>Lectura de Rayos X</option>
