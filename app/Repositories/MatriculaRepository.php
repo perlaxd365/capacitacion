@@ -131,6 +131,25 @@ class MatriculaRepository
         return $row;
     }
 
+    public function update(int $id, array $data): void
+    {
+        $stmt = $this->db->prepare(
+            "UPDATE matriculas SET nombre = ?, apellido = ?, dni = ?, telefono = ?, correo = ?, curso = ?, fecha = ? WHERE id = ?"
+        );
+        $stmt->bind_param(
+            'sssssssi',
+            $data['nombre'],
+            $data['apellido'],
+            $data['dni'],
+            $data['telefono'],
+            $data['correo'],
+            $data['curso'],
+            $data['fecha'],
+            $id
+        );
+        $stmt->execute();
+    }
+
     public function payments(int $id): array
     {
         $stmt = $this->db->prepare("SELECT id, fecha, monto, metodo_pago, numero_operacion, observacion FROM pagos WHERE matricula_id = ? ORDER BY fecha ASC, id ASC");

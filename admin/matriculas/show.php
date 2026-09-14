@@ -50,23 +50,26 @@ include __DIR__ . '/../layouts/nav.php';
 
             <div class="card p-4 mb-4">
                 <h5 class="fw-bold mb-3">Datos del estudiante</h5>
-                <dl class="row mb-0">
-                    <dt class="col-5">DNI</dt>
-                    <dd class="col-7"><?=e($mat['dni'])?></dd>
-                    <dt class="col-5">Teléfono</dt>
-                    <dd class="col-7"><?=e($mat['telefono'])?></dd>
-                    <dt class="col-5">Correo</dt>
-                    <dd class="col-7 text-break"><?=e($mat['correo'])?></dd>
-                    <dt class="col-5">Matrícula</dt>
-                    <dd class="col-7"><?=e(date('d/m/Y', strtotime($mat['fecha'])))?></dd>
-                </dl>
-
-                <div class="d-grid mt-4">
-                    <a class="btn btn-danger" target="_blank"
-                       href="<?=e(app_url('/admin/matriculas/ficha.php'))?>?id=<?=$id?>">
-                        <i class="fa-solid fa-file-pdf me-1"></i> Ficha de matrícula
-                    </a>
-                </div>
+                <form method="post" id="form-estudiante"
+                      action="<?=e(app_url('/actions/matriculas/update.php'))?>">
+                    <input type="hidden" name="id_matricula" value="<?=$id?>">
+                    <div class="mb-2"><label class="form-label fw-semibold">Nombres</label><input class="form-control form-control-sm" name="nombre" value="<?=e($mat['nombre'])?>" required></div>
+                    <div class="mb-2"><label class="form-label fw-semibold">Apellidos</label><input class="form-control form-control-sm" name="apellido" value="<?=e($mat['apellido'])?>" required></div>
+                    <div class="mb-2"><label class="form-label fw-semibold">DNI</label><input class="form-control form-control-sm" name="dni" value="<?=e($mat['dni'])?>" required></div>
+                    <div class="mb-2"><label class="form-label fw-semibold">Teléfono</label><input class="form-control form-control-sm" name="telefono" value="<?=e($mat['telefono'])?>"></div>
+                    <div class="mb-2"><label class="form-label fw-semibold">Correo</label><input class="form-control form-control-sm" name="correo" value="<?=e($mat['correo'])?>" required></div>
+                    <div class="mb-2"><label class="form-label fw-semibold">Curso</label><input class="form-control form-control-sm" name="curso" value="<?=e($mat['curso'])?>" required></div>
+                    <div class="mb-3"><label class="form-label fw-semibold">Fecha de matrícula</label><input class="form-control form-control-sm" type="date" name="fecha" value="<?=e(date('Y-m-d', strtotime($mat['fecha'])))?>" required></div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" form="form-estudiante">
+                            <i class="fa-solid fa-floppy-disk me-1"></i> Guardar cambios
+                        </button>
+                        <a class="btn btn-danger" target="_blank"
+                           href="<?=e(app_url('/admin/matriculas/ficha.php'))?>?id=<?=$id?>">
+                            <i class="fa-solid fa-file-pdf me-1"></i> Ficha de matrícula
+                        </a>
+                    </div>
+                </form>
             </div>
 
             <div class="card p-4">
