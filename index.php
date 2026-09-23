@@ -645,7 +645,7 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> Viernes 22 de septiembre del 2026
+                                    <strong>📅 Inicio:</strong> Viernes 25 de septiembre del 2026
                                 </p>
 
                                 <p class="text-muted mb-1">
