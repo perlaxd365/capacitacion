@@ -579,14 +579,14 @@ include 'template/header.php';
 
             <div class="row g-4">
 
-                <!-- SIGNOS VITALES -->
+                <!-- HERIDAS Y SUTURAS -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
                     <div class="card card-curso w-100"
-                        onclick="abrirFormulario('Curso Taller de Signos Vitales')"
+                        onclick="abrirFormulario('Curso Taller de Heridas y Suturas')"
                         style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
 
                         <div style="position: relative;">
-                            <img src="img/signos.png" class="card-img-top">
+                            <img src="img/heridas.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
 
                             <!-- ETIQUETA ACTIVO -->
@@ -600,7 +600,7 @@ include 'template/header.php';
                                         top:10px;
                                         left:10px;
                                         font-weight:bold;">
-                                🩺 ACTIVO
+                                🩹 ACTIVO
                             </span>
                         </div>
 
@@ -609,11 +609,11 @@ include 'template/header.php';
                             <div>
 
                                 <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-heart-pulse"></i>
+                                    <i class="fa-solid fa-scissors"></i>
                                 </div>
 
                                 <h5 class="fw-bold">
-                                    Curso Taller de Signos Vitales
+                                    Curso Taller de Heridas y Suturas
                                 </h5>
 
                                 <hr>
@@ -621,29 +621,23 @@ include 'template/header.php';
                                 <ul style="text-align:left;">
 
                                     <li class="text-muted">
-                                        ✅ Toma de presión arterial
+                                        ✅ Tipos de heridas y manejo adecuado
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Frecuencia cardiaca y respiratoria
+                                        ✅ Técnicas básicas de sutura
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Saturación de oxígeno y temperatura
+                                        ✅ Uso correcto de instrumentos
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Interpretación básica de signos vitales
+                                        ✅ Limpieza y curación de heridas
                                     </li>
 
                                     <li class="text-muted">
-                                        ✅ Práctica guiada
-                                    </li>
-                                    <li class="text-muted">
-                                        ✅ Materiales incluidos
-                                    </li>
-                                    <li class="text-muted">
-                                        ✅ Certificado incluido
+                                        ✅ Práctica guiada y certificado
                                     </li>
 
                                 </ul>
@@ -651,11 +645,19 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> Sábado 05 de septiembre del 2026
+                                    <strong>📅 Inicio:</strong> Viernes 22 de septiembre del 2026
                                 </p>
 
                                 <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
+                                    <strong>⏰ Horario:</strong> 6:00 pm – 9:00 pm
+                                </p>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    ✅ Materiales incluidos
+                                </p>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    ✅ Certificado incluido
                                 </p>
 
                                 <p class="text-muted mb-2">
@@ -663,7 +665,7 @@ include 'template/header.php';
                                 </p>
 
                                 <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
-                                    S/29
+                                    S/39
                                 </span>
 
                                 <p style="color:#dc3545; font-size:13px; font-weight:bold;">
@@ -673,7 +675,7 @@ include 'template/header.php';
                             </div>
 
                             <button class="btn btn-curso text-white w-100">
-                                🩺 Inscribirme ahora
+                                🩹 Inscribirme ahora
                             </button>
 
                         </div>
@@ -1120,113 +1122,6 @@ include 'template/header.php';
 
                     </div>
 
-                </div>
-
-                <!-- HERIDAS Y SUTURAS FINALIZADO -->
-                <div class="col-md-4 d-flex" data-aos="fade-up">
-                    <div class="card card-curso w-100 disabled-card">
-
-                        <div style="position: relative;">
-                            <img src="img/heridas.png" class="card-img-top">
-                            <div class="card-img-overlay-custom"></div>
-
-                            <!-- ETIQUETA FINALIZADO -->
-                            <span style="
-                        background:#dc3545;
-                        color:white;
-                        padding:6px 12px;
-                        border-radius:20px;
-                        font-size:12px;
-                        position:absolute;
-                        top:10px;
-                        left:10px;
-                        font-weight:bold;">
-                                🩹 FINALIZADO
-                            </span>
-                        </div>
-
-                        <div class="card-body">
-
-                            <div>
-
-                                <div class="icono-curso mb-2">
-                                    <i class="fa-solid fa-scissors"></i>
-                                </div>
-
-                                <h5 class="fw-bold">
-                                    Curso Taller de Heridas y Suturas
-                                </h5>
-
-                                <hr>
-
-                                <ul style="text-align:left;">
-
-                                    <li class="text-muted">
-                                        ✅ Tipos de heridas y manejo adecuado
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Técnicas básicas de sutura
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Uso correcto de instrumentos
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Limpieza y curación de heridas
-                                    </li>
-
-                                    <li class="text-muted">
-                                        ✅ Práctica guiada y certificado
-                                    </li>
-
-                                </ul>
-
-                                <hr>
-
-                                <p class="text-muted mb-1">
-                                    <strong>📅 Fecha:</strong> Sábado 22 de agosto
-                                </p>
-
-                                <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
-                                </p>
-
-                                <p style="color:#198754; font-size:13px; font-weight:bold;">
-                                    ✅ Materiales incluidos
-                                </p>
-
-                                <p style="color:#198754; font-size:13px; font-weight:bold;">
-                                    ✅ Certificado incluido
-                                </p>
-
-                                <p class="text-muted mb-2">
-                                    <strong>📍 Modalidad:</strong> Presencial
-                                </p>
-
-                                <span class="badge-curso mb-3 d-inline-block"
-                                    style="font-size:14px;">
-                                    S/39
-                                </span>
-
-                                <p style="
-                    color:#dc3545;
-                    font-size:13px;
-                    font-weight:bold;">
-                                    ⚠️ Curso finalizado
-                                </p>
-
-                            </div>
-
-                            <button class="btn btn-curso disabled text-white w-100"
-                                disabled>
-                                🩹 Finalizado
-                            </button>
-
-                        </div>
-
-                    </div>
                 </div>
 
                 <!-- INYECTOTERAPIA -->
@@ -1971,6 +1866,106 @@ include 'template/header.php';
                     </div>
                 </div>
 
+                <!-- SIGNOS VITALES FINALIZADO -->
+                <div class="col-md-4 d-flex" data-aos="fade-up">
+                    <div class="card card-curso w-100 disabled-card">
+
+                        <div style="position: relative;">
+                            <img src="img/signos.png" class="card-img-top">
+                            <div class="card-img-overlay-custom"></div>
+
+                            <!-- ETIQUETA FINALIZADO -->
+                            <span style="
+                                background:#dc3545;
+                                color:white;
+                                padding:6px 12px;
+                                border-radius:20px;
+                                font-size:12px;
+                                position:absolute;
+                                top:10px;
+                                left:10px;
+                                font-weight:bold;">
+                                🩺 FINALIZADO
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div>
+
+                                <div class="icono-curso mb-2">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    Curso Taller de Signos Vitales
+                                </h5>
+
+                                <hr>
+
+                                <ul style="text-align:left;">
+
+                                    <li class="text-muted">
+                                        ✅ Toma de presión arterial
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ✅ Frecuencia cardiaca y respiratoria
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ✅ Saturación de oxígeno y temperatura
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ✅ Interpretación básica de signos vitales
+                                    </li>
+
+                                    <li class="text-muted">
+                                        ✅ Práctica guiada
+                                    </li>
+                                    <li class="text-muted">
+                                        ✅ Materiales incluidos
+                                    </li>
+                                    <li class="text-muted">
+                                        ✅ Certificado incluido
+                                    </li>
+
+                                </ul>
+
+                                <hr>
+
+                                <p class="text-muted mb-1">
+                                    <strong>📅 Inicio:</strong> Sábado 05 de septiembre del 2026
+                                </p>
+
+                                <p class="text-muted mb-1">
+                                    <strong>⏰ Horario:</strong> 5:00 pm – 8:00 pm
+                                </p>
+
+                                <p class="text-muted mb-2">
+                                    <strong>📍 Modalidad:</strong> Presencial
+                                </p>
+
+                                <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
+                                    S/29
+                                </span>
+
+                                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
+                                    ⚠️ Curso finalizado
+                                </p>
+
+                            </div>
+
+                            <button class="btn btn-curso disabled text-white w-100" disabled>
+                                🩺 Finalizado
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
 
 
 
@@ -2061,7 +2056,6 @@ include 'template/header.php';
                 </div>
 
             </div>
-
         </div>
     </section>
 
@@ -2132,13 +2126,14 @@ include 'template/header.php';
                             <select class="form-control" id="cursoSelect" name="curso">
 
                                 <optgroup label="🟢 Cursos Disponibles">
-                                    <option>Curso Taller de Signos Vitales</option>
+                                    <option>Curso Taller de Heridas y Suturas</option>
                                     <option>Primeros Auxilios y RCP Básico</option>
                                     <option>Curso Taller Especializado 3 Meses</option>
                                     <option>Preparación de Medicina (16 semanas)</option>
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
+                                    <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
                                     <option disabled>Inyectoterapia Básica</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
