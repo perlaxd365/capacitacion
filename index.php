@@ -545,7 +545,7 @@ include 'template/header.php';
                         <p><strong>Inversión Total:</strong> S/300</p>
                         <p><strong>Mensual:</strong> S/120</p>
                         <p><strong>Incluye:</strong> Certificado + Materiales</p>
-                        <p><strong>Inicio:</strong> 08/05/2026</p>
+                        <p><strong>Dias:</strong>Lunes, Miercoles o Viernes, tú eliges !</p>
                     </div>
 
                     <div class="mt-4">
