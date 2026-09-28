@@ -49,7 +49,7 @@ if (!$certificado) {
 
 $codigo = $certificado["codigo_verificacion"];
 
-$url = "https://capacitacion.clinicabahia.pe/verificar.php?codigo=" . urlencode($codigo);
+$url = "https://capacitacion.clinica-bahia.com/verificar.php?codigo=" . urlencode($codigo);
 
 $carpetaQR = __DIR__ . "/temp";
 

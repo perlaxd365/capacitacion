@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="container">
 
         <a class="navbar-brand fw-bold curso-titulo" href="#">
-            <img src="https://capacitacion.clinicabahia.pe/img/logo.png" width="60px">
+            <img src="https://capacitacion.clinica-bahia.com/img/logo.png" width="60px">
             Capacitaciones Médicas Bahía
         </a>
 

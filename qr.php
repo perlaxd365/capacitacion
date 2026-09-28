@@ -11,7 +11,7 @@ if (!isset($_GET['codigo'])) {
 
 $codigo = $_GET['codigo'];
 
-$url = "https://capacitacion.clinicabahia.pe/verificar.php?codigo=" . urlencode($codigo);
+$url = "https://capacitacion.clinica-bahia.com/verificar.php?codigo=" . urlencode($codigo);
 
 $result = new Builder(
     writer: new PngWriter(),

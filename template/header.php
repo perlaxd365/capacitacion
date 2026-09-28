@@ -13,8 +13,8 @@
     <meta property="og:title"
         content="Cursos de primeros auxilios, RCP, inyectoterapia y capacitaciones médicas en Chimbote. Aprende con profesionales. Cupos limitados. en Chimbote">
     <meta property="og:description" content=" Curso práctico en Chimbote. Cupos limitados.">
-    <meta property="og:image" content="https://capacitacion.clinicabahia.pe/img/logo.png">
-    <meta property="og:url" content="https://capacitacion.clinicabahia.pe/">
+    <meta property="og:image" content="https://capacitacion.clinica-bahia.com/img/logo.png">
+    <meta property="og:url" content="https://capacitacion.clinica-bahia.com/">
     <meta property="og:type" content="website">
 
 
