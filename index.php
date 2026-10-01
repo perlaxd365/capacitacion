@@ -579,6 +579,92 @@ include 'template/header.php';
 
             <div class="row g-4">
 
+<!-- INYECTOTERAPIA BÁSICA -->
+<div class="col-md-4 d-flex" data-aos="fade-up">
+    <div class="card card-curso w-100"
+        onclick="abrirFormulario('Inyectoterapia Básica')"
+        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
+
+        <div style="position: relative;">
+            <img src="img/INYECTO_BASICA.png" class="card-img-top">
+            <div class="card-img-overlay-custom"></div>
+
+            <span style="
+                        background:#19B5C8;
+                        color:white;
+                        padding:6px 12px;
+                        border-radius:20px;
+                        font-size:12px;
+                        position:absolute;
+                        top:10px;
+                        left:10px;
+                        font-weight:bold;">
+                💉 ACTIVO
+            </span>
+        </div>
+
+        <div class="card-body">
+            <div>
+                <div class="icono-curso mb-2">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+
+                <h5 class="fw-bold">Inyectoterapia Básica</h5>
+                <hr>
+
+                <ul style="text-align:left;">
+                    <li class="text-muted">
+                        ✅ Ideal para personas que desean adquirir una habilidad práctica desde cero y mejorar sus
+                        oportunidades en el sector salud.
+                    </li>
+                    <li class="text-muted">
+                        ✅ Fundamentos de inyectoterapia y bioseguridad.
+                    </li>
+                    <li class="text-muted">
+                        ✅ Vías de administración y técnicas correctas.
+                    </li>
+                    <li class="text-muted">
+                        ✅ Práctica guiada y supervisada.
+                    </li>
+                </ul>
+
+                <hr>
+
+                <p class="text-muted mb-1">
+                    <strong>📅 Inicio:</strong> Sábado
+                </p>
+
+                <p class="text-muted mb-1">
+                    <strong>⏰ Horario:</strong> 4:00 PM – 7:00 PM
+                </p>
+
+                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                    ✅ Incluye materiales
+                </p>
+
+                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                    ✅ Incluye certificado
+                </p>
+
+                <p class="text-muted mb-2">
+                    <strong>📍 Modalidad:</strong> Presencial
+                </p>
+
+                <span class="badge-curso mb-3 d-inline-block" style="font-size:18px;">
+                    S/29
+                </span>
+
+                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
+                    ⚠️ Cupos limitados
+                </p>
+            </div>
+
+            <button class="btn btn-curso text-white w-100">
+                💉 Inscribirme ahora
+            </button>
+        </div>
+    </div>
+</div>
                 <!-- HERIDAS Y SUTURAS -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
                     <div class="card card-curso w-100"
@@ -2126,16 +2212,18 @@ include 'template/header.php';
                             <select class="form-control" id="cursoSelect" name="curso">
 
                                 <optgroup label="🟢 Cursos Disponibles">
-                                    <option>Curso Taller de Heridas y Suturas</option>
                                     <option>Primeros Auxilios y RCP Básico</option>
                                     <option>Curso Taller Especializado 3 Meses</option>
                                     <option>Preparación de Medicina (16 semanas)</option>
+                                    <option>Inyectoterapia Básica</option>
+
+                                    
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
+                                    <option disabled>Curso Taller de Heridas y Suturas</option>
                                     <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
-                                    <option disabled>Inyectoterapia Básica</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
                                     <option disabled>Ecografías Generales</option>
                                     <option disabled>Lectura de Rayos X</option>
