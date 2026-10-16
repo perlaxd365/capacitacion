@@ -666,7 +666,7 @@ include 'template/header.php';
     </div>
 </div>
                 <!-- HERIDAS Y SUTURAS -->
-                <div class="col-md-4 d-flex" data-aos="fade-up">
+                <div class="col-md-4 d-flex order-first" data-aos="fade-up">
                     <div class="card card-curso w-100"
                         onclick="abrirFormulario('Curso Taller de Heridas y Suturas')"
                         style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
@@ -731,11 +731,11 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> Viernes 25 de septiembre del 2026
+                                    <strong>📅 Inicio:</strong> Viernes 16 de octubre del 2026
                                 </p>
 
                                 <p class="text-muted mb-1">
-                                    <strong>⏰ Horario:</strong> 6:00 pm – 9:00 pm
+                                    <strong>⏰ Horario:</strong> 4:00 pm – 7:00 pm
                                 </p>
 
                                 <p style="color:#198754; font-size:13px; font-weight:bold;">
@@ -2216,12 +2216,10 @@ include 'template/header.php';
                                     <option>Curso Taller Especializado 3 Meses</option>
                                     <option>Preparación de Medicina (16 semanas)</option>
                                     <option>Inyectoterapia Básica</option>
-
-                                    
+                                    <option>Curso Taller de Heridas y Suturas</option>
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
-                                    <option disabled>Curso Taller de Heridas y Suturas</option>
                                     <option disabled>Curso Taller de Signos Vitales</option>
                                     <option disabled>Lectura Radiológica Pulmonar: De lo Normal a lo Patológico</option>
                                     <option disabled>Seminario Gratuito en Emergencias</option>
