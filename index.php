@@ -579,6 +579,107 @@ include 'template/header.php';
 
             <div class="row g-4">
 
+<!-- ECOGRAFÍA ABDOMINAL -->
+<div class="col-md-4 d-flex" data-aos="fade-up">
+    <div class="card card-curso w-100"
+        onclick="abrirFormulario('Ecografía Abdominal Básica y Gineco - Obstétrica')"
+        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
+
+        <div style="position: relative;">
+            <img src="img/ecografia_abdominal.jpg" class="card-img-top">
+            <div class="card-img-overlay-custom"></div>
+
+            <span style="
+                        background:#19B5C8;
+                        color:white;
+                        padding:6px 12px;
+                        border-radius:20px;
+                        font-size:12px;
+                        position:absolute;
+                        top:10px;
+                        left:10px;
+                        font-weight:bold;">
+                🩺 ACTIVO
+            </span>
+        </div>
+
+        <div class="card-body">
+            <div>
+                <div class="icono-curso mb-2">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <h5 class="fw-bold">
+                    Ecografía Abdominal Básica y Gineco - Obstétrica
+                </h5>
+
+                <p class="text-muted">
+                    Dirigido por el Dr. Ronald Huerta, especialista en Radiología.
+                </p>
+
+                <hr>
+
+                <ul style="text-align:left;">
+                    <li class="text-muted">
+                        ✅ Dirigido a preinternos e internos de Medicina, médicos generales y especialistas en Cirugía General.
+                    </li>
+                    <li class="text-muted">
+                        ✅ Fortalece tus conocimientos en ecografía abdominal.
+                    </li>
+                    <li class="text-muted">
+                        ✅ Desarrolla habilidades prácticas con práctica supervisada.
+                    </li>
+                </ul>
+
+                <hr>
+
+                <p class="text-muted mb-1">
+                    <strong>👨‍⚕️ Ponente:</strong> Dr. Ronald Huerta – Especialista en Radiología
+                </p>
+
+                <p class="text-muted mb-1">
+                    <strong>📅 Inicio:</strong> Sábado 28 de noviembre
+                </p>
+
+                <p class="text-muted mb-1">
+                    <strong>⏰ Hora:</strong> 5:00 p.m.
+                </p>
+
+                <p class="text-muted mb-1">
+                    <strong>📖 Modalidad de aprendizaje:</strong> Teoría lunes, prácticas miércoles y viernes
+                </p>
+
+                <p class="text-muted mb-1">
+                    <strong>📍 Lugar:</strong> Urb. Santa Rosa MZ F' LT 30 – Av. Anchoveta, a media cuadra de Clínica Bahía
+                </p>
+
+                <p class="text-muted mb-2">
+                    <strong>📍 Modalidad:</strong> Presencial
+                </p>
+
+                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                    ✅ Certificado incluido
+                </p>
+
+                <span class="badge-curso mb-3 d-inline-block" style="font-size:18px;">
+                    S/ 900
+                </span>
+
+                <p class="text-muted mb-2" style="font-size:13px;">
+                    También puedes pagar en dos partes.
+                </p>
+
+                <p style="color:#dc3545; font-size:13px; font-weight:bold;">
+                    ⚠️ Cupos limitados
+                </p>
+            </div>
+
+            <button class="btn btn-curso text-white w-100">
+                🩺 Inscribirme ahora
+            </button>
+        </div>
+    </div>
+</div>
 <!-- INYECTOTERAPIA BÁSICA -->
 <div class="col-md-4 d-flex" data-aos="fade-up">
     <div class="card card-curso w-100"
@@ -2217,6 +2318,7 @@ include 'template/header.php';
                                     <option>Preparación de Medicina (16 semanas)</option>
                                     <option>Inyectoterapia Básica</option>
                                     <option>Curso Taller de Heridas y Suturas</option>
+                                    <option>Ecografía Abdominal Básica y Gineco - Obstétrica</option>
                                 </optgroup>
 
                                 <optgroup label="🟡 Próximamente">
