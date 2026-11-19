@@ -803,6 +803,11 @@ include 'template/header.php';
                                     Curso Taller de Heridas y Suturas
                                 </h5>
 
+                                <p class="text-muted">
+                                    Una excelente oportunidad para ampliar tus conocimientos en
+                                    procedimientos básicos de atención de heridas y técnicas de sutura.
+                                </p>
+
                                 <hr>
 
                                 <ul style="text-align:left;">
@@ -832,11 +837,15 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong> Viernes 16 de octubre del 2026
+                                    <strong>📅 Fecha:</strong> Sábado 21 de noviembre
                                 </p>
 
                                 <p class="text-muted mb-1">
                                     <strong>⏰ Horario:</strong> 4:00 pm – 7:00 pm
+                                </p>
+
+                                <p class="text-muted mb-1">
+                                    <strong>📍 Lugar:</strong> Chimbote
                                 </p>
 
                                 <p style="color:#198754; font-size:13px; font-weight:bold;">
@@ -852,8 +861,14 @@ include 'template/header.php';
                                 </p>
 
                                 <span class="badge-curso mb-3 d-inline-block" style="font-size:14px;">
-                                    S/39
+                                    Inversión: S/39
                                 </span>
+
+                                <p class="text-muted mb-2">
+                                    <strong>📲 Reserva:</strong>
+                                    <a href="https://wa.me/51982153926?text=Hola,%20quiero%20reservar%20el%20curso%20de%20Heridas%20y%20Suturas"
+                                        target="_blank" style="color:#198754; font-weight:bold;">WhatsApp 982 153 926</a>
+                                </p>
 
                                 <p style="color:#dc3545; font-size:13px; font-weight:bold;">
                                     ⚠️ Cupos limitados
@@ -1147,10 +1162,12 @@ include 'template/header.php';
                     </div>
                 </div>
 
-                <!-- CURSO PRIMEROS AUXILIOS + RCP FINALIZADO -->
+                <!-- CURSO PRIMEROS AUXILIOS + RCP ACTIVO -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
 
-                    <div class="card card-curso w-100 disabled-card">
+                    <div class="card card-curso w-100"
+                        onclick="abrirFormulario('Primeros Auxilios y RCP Básico')"
+                        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
 
                         <div style="position: relative;">
 
@@ -1159,9 +1176,9 @@ include 'template/header.php';
 
                             <div class="card-img-overlay-custom"></div>
 
-                            <!-- ETIQUETA FINALIZADO -->
+                            <!-- ETIQUETA ACTIVO -->
                             <span style="
-                background:#dc3545;
+                background:#19B5C8;
                 color:white;
                 padding:6px 12px;
                 border-radius:20px;
@@ -1170,7 +1187,7 @@ include 'template/header.php';
                 top:10px;
                 left:10px;
                 font-weight:bold;">
-                                🚑 FINALIZADO
+                                🚑 ACTIVO
                             </span>
 
                         </div>
@@ -1197,23 +1214,27 @@ include 'template/header.php';
                                 <ul style="text-align:left;">
 
                                     <li class="text-muted">
-                                        🔥 Quemaduras
+                                        ✅ Primeros auxilios y atención de emergencias
                                     </li>
 
                                     <li class="text-muted">
-                                        🩸 Hemorragias
+                                        ❤️ Reanimación cardiopulmonar (RCP)
                                     </li>
 
                                     <li class="text-muted">
-                                        ☠️ Intoxicaciones
+                                        🔥 Atención de quemaduras
                                     </li>
 
                                     <li class="text-muted">
-                                        🐍 Mordeduras
+                                        🩸 Control de hemorragias
                                     </li>
 
                                     <li class="text-muted">
-                                        ❤️ RCP Básico
+                                        ☠️ Manejo de intoxicaciones
+                                    </li>
+
+                                    <li class="text-muted">
+                                        🐍 Atención de mordeduras
                                     </li>
 
                                 </ul>
@@ -1221,21 +1242,21 @@ include 'template/header.php';
                                 <hr>
 
                                 <p class="text-muted mb-1">
-                                    <strong>📅 Inicio:</strong>
-                                    Viernes 28 de agosto
+                                    <strong>📅 Fecha:</strong>
+                                    Viernes 20 de noviembre
                                 </p>
 
                                 <p class="text-muted mb-1">
                                     <strong>⏰ Horario:</strong>
-                                    10:00 AM – 1:00 pm
+                                    5:00 p.m. – 8:00 p.m.
                                 </p>
 
                                 <p class="text-muted mb-2">
                                     <strong>📍 Modalidad:</strong>
-                                    Presencial
+                                    100% presencial – Chimbote
                                 </p>
 
-                                <!-- PROMOCIÓN 50% -->
+                                <!-- INVERSIÓN -->
                                 <div style="
                                         background:#e8fff1;
                                         border-left:4px solid #00c853;
@@ -1244,23 +1265,6 @@ include 'template/header.php';
                                         margin-bottom:15px;
                                         text-align:center;
                                     ">
-
-                                    <div style="
-                                        color:#dc3545;
-                                        font-size:14px;
-                                        font-weight:bold;
-                                        margin-bottom:5px;
-                                    ">
-                                        🔥 50% DE DESCUENTO
-                                    </div>
-
-                                    <div style="
-                                        color:#777;
-                                        text-decoration:line-through;
-                                        font-size:14px;
-                                    ">
-                                        Precio regular: S/58
-                                    </div>
 
                                     <div style="
                                         color:#0d6efd;
@@ -1276,7 +1280,7 @@ include 'template/header.php';
                                             font-size:13px;
                                             font-weight:bold;
                                         ">
-                                        ¡50% de descuento aplicado!
+                                        🎓 Certificación + QR
                                     </div>
 
                                 </div>
@@ -1287,7 +1291,7 @@ include 'template/header.php';
                                     font-weight:bold;
                                     text-align:center;
                                 ">
-                                    ✅ Curso práctico
+                                    📲 Reserva: WhatsApp 982 153 926
                                 </p>
 
                                 <p style="
@@ -1296,13 +1300,13 @@ include 'template/header.php';
                                     font-weight:bold;
                                     text-align:center;
                                 ">
-                                    ⚠️ Cupos limitados
+                                    ⚠️ ¡Inscripciones abiertas! Cupos limitados
                                 </p>
 
                             </div>
 
-                            <button class="btn btn-curso disabled text-white w-100" disabled>
-                                🚑 Finalizado
+                            <button class="btn btn-curso text-white w-100">
+                                🚑 Inscribirme ahora
                             </button>
 
                         </div>
