@@ -1595,16 +1595,18 @@ include 'template/header.php';
 
 
 
-                <!-- CURSO RCP (CARD) -->
+                <!-- CURSO RCP ACTIVO -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
-                    <div class="card card-curso w-100 disabled-card">
+                    <div class="card card-curso w-100"
+                        onclick="abrirFormulario('Primeros Auxilios y RCP Básico')"
+                        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
 
                         <div style="position: relative;">
                             <img src="img/primeros_auxilios.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
 
                             <span style="
-                                background:#dc3545;
+                                background:#19B5C8;
                                 color:white;
                                 padding:6px 12px;
                                 border-radius:20px;
@@ -1629,28 +1631,36 @@ include 'template/header.php';
                                 <hr>
 
                                 <ul>
-                                    <li class="text-muted">🔥 Quemaduras</li>
-                                    <li class="text-muted">🩸 Hemorragias</li>
-                                    <li class="text-muted">☠️ Intoxicaciones</li>
-                                    <li class="text-muted">🐍 Mordeduras</li>
-                                    <li class="text-muted">❤️ RCP Básico</li>
+                                    <li class="text-muted">✅ Primeros auxilios y atención de emergencias</li>
+                                    <li class="text-muted">❤️ Reanimación cardiopulmonar (RCP)</li>
+                                    <li class="text-muted">🔥 Atención de quemaduras</li>
+                                    <li class="text-muted">🩸 Control de hemorragias</li>
+                                    <li class="text-muted">☠️ Manejo de intoxicaciones</li>
+                                    <li class="text-muted">🐍 Atención de mordeduras</li>
                                 </ul>
 
                                 <hr>
 
-                                <p class="text-muted mb-1"><strong>📅 Fecha:</strong> Sábado 02 de mayo</p>
-                                <p class="text-muted mb-1"><strong>⏰ Hora:</strong> 5:00 pm – 8:00 pm</p>
-                                <p class="text-muted mb-2"><strong>📍 Ubicación:</strong> Urb. Santa Rosa F'30</p>
+                                <p class="text-muted mb-1"><strong>📅 Fecha:</strong> Viernes 20 de noviembre</p>
+                                <p class="text-muted mb-1"><strong>⏰ Horario:</strong> 5:00 p.m. – 8:00 p.m.</p>
+                                <p class="text-muted mb-2"><strong>📍 Modalidad:</strong> 100% presencial – Chimbote</p>
 
                                 <span class="badge-curso mb-3 d-inline-block">
-                                    S/30
+                                    Inversión: S/29
                                 </span>
 
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    🎓 Certificación + QR
+                                </p>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    📲 Reserva: WhatsApp 982 153 926
+                                </p>
 
                             </div>
 
-                            <button class="btn btn-curso disabled text-white w-100">
-                                Finalizado
+                            <button class="btn btn-curso text-white w-100">
+                                🚑 Inscribirme ahora
                             </button>
 
                         </div>
@@ -1956,14 +1966,28 @@ include 'template/header.php';
                     </div>
                 </div>
 
-                <!-- RCP -->
+                <!-- RCP ACTIVO -->
                 <div class="col-md-4 d-flex" data-aos="fade-up">
-                    <div class="card card-curso w-100 disabled-card"
-                        onclick="abrirFormulario('Primeros Auxilios y RCP Basico')">
+                    <div class="card card-curso w-100"
+                        onclick="abrirFormulario('Primeros Auxilios y RCP Básico')"
+                        style="cursor:pointer; border:2px solid #19B5C8; box-shadow:0 15px 40px rgba(25,181,200,.20);">
 
                         <div style="position: relative;">
                             <img src="img/primeros_auxilios.png" class="card-img-top">
                             <div class="card-img-overlay-custom"></div>
+
+                            <span style="
+                                background:#19B5C8;
+                                color:white;
+                                padding:6px 12px;
+                                border-radius:20px;
+                                font-size:12px;
+                                position:absolute;
+                                top:10px;
+                                left:10px;
+                                font-weight:bold;">
+                                🚑 ACTIVO
+                            </span>
                         </div>
 
                         <div class="card-body">
@@ -1975,47 +1999,35 @@ include 'template/header.php';
                                 <h5 class="fw-bold">Primeros Auxilios y RCP Básico</h5>
                                 <hr>
                                 <ul>
-                                    <li class="text-muted">
-                                        📌 Ideal para:
-                                        Público en general, estudiantes y personas que desean aprender a actuar en
-                                        emergencias
-                                    </li>
-
-                                    <li class="text-muted">
-                                        📅 Fecha:
-                                        4 de abril
-                                    </li>
-
-                                    <li class="text-muted">
-                                        👨‍⚕️ Instructor:
-                                        Profesional de salud certificado en emergencias y RCP
-                                    </li>
-
-                                    <li class="text-muted">
-                                        📍 Ubicación:
-                                        Urb. Santa Rosa F'30
-                                        A media cuadra de Clínica Bahía – Nuevo Chimbote
-                                    </li>
-
-                                    <li class="text-muted">
-                                        📚 Modalidad:
-                                        Teórico – práctico
-                                    </li>
-                                    <li class="text-muted">
-                                        📚 Incluye:
-                                        🔥 Quemaduras , 🩸 Hemorragias, ☠️ Intoxicaciones, 🐍 Mordeduras, ❤️ RCP Básico
-                                    </li>
+                                    <li class="text-muted">✅ Primeros auxilios y atención de emergencias</li>
+                                    <li class="text-muted">❤️ Reanimación cardiopulmonar (RCP)</li>
+                                    <li class="text-muted">🔥 Atención de quemaduras</li>
+                                    <li class="text-muted">🩸 Control de hemorragias</li>
+                                    <li class="text-muted">☠️ Manejo de intoxicaciones</li>
+                                    <li class="text-muted">🐍 Atención de mordeduras</li>
                                 </ul>
 
                                 <hr>
 
+                                <p class="text-muted mb-1"><strong>📅 Fecha:</strong> Viernes 20 de noviembre</p>
+                                <p class="text-muted mb-1"><strong>⏰ Horario:</strong> 5:00 p.m. – 8:00 p.m.</p>
+                                <p class="text-muted mb-2"><strong>📍 Modalidad:</strong> 100% presencial – Chimbote</p>
+
                                 <span class="badge-curso mb-3 d-inline-block">
-                                    Costo S/30 | 4 Abril
+                                    Inversión: S/29
                                 </span>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    🎓 Certificación + QR
+                                </p>
+
+                                <p style="color:#198754; font-size:13px; font-weight:bold;">
+                                    📲 Reserva: WhatsApp 982 153 926
+                                </p>
                             </div>
 
-                            <button class="btn btn-curso disabled text-white w-100">
-                                Finalizado
+                            <button class="btn btn-curso text-white w-100">
+                                🚑 Inscribirme ahora
                             </button>
                         </div>
 
